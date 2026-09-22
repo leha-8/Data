@@ -1,0 +1,49 @@
+1 - Phân tích toàn bộ hình ảnh
+Câu lệnh:
+“Hãy phân tích chi tiết hình ảnh này, bao gồm:
+- Chủ thể chính
+- Bối cảnh
+- Góc máy
+- Ánh sáng
+- Màu sắc
+- Bố cục
+- Phong cách thiết kế
+- Hiệu ứng đặc biệt
+Trình bày rõ ràng theo từng mục.”
+
+2 - Tách riêng phong cách hình ảnh
+Câu lệnh:
+“Hãy chỉ tập trung phân tích phong cách thiết kế của hình ảnh này, bao gồm:
+- Art Style
+- Color Palette
+- Lighting
+- Composition
+- Camera Settings
+- Rendering Style.”
+
+3 - Nâng cấp Prompt để tạo ảnh chất lượng cao hơn
+Câu lệnh:
+“Hãy tối ưu Prompt này để tạo ra hình ảnh:
+- Chuyên nghiệp hơn
+- Điện ảnh hơn
+- Chi tiết hơn
+- Có chiều sâu hơn
+- Dễ viral trên mạng xã hội hơn.”
+
+4 - Trích xuất Prompt AI từ hình ảnh
+Câu lệnh:
+“Hãy đóng vai chuyên gia Prompt Engineering.
+Dựa trên hình ảnh này, hãy tạo một Prompt hoàn chỉnh để tái tạo hình ảnh tương tự bằng AI.
+Yêu cầu:
+- Viết bằng tiếng Anh
+- Mô tả chi tiết
+- Chuẩn Midjourney/Gemini/ChatGPT
+- Chất lượng cao
+- Tối ưu để tạo ảnh sát với bản gốc.”
+
+5 - Sao chép phong cách cho nội dung riêng của bạn
+Câu lệnh:
+“Hãy giữ nguyên phong cách của hình ảnh này nhưng thay chủ thể thành:
+[NỘI DUNG MỚI]
+Sau đó xuất Prompt hoàn chỉnh để tạo ảnh mới.”
+Trả lời

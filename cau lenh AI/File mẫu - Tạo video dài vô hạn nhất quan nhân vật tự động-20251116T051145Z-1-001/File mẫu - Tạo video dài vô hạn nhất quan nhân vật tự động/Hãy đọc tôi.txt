@@ -1,0 +1,39 @@
+Video hướng dẫn: https://youtu.be/cBFCBzM5Vyw
+Cách sử dụng:
+
+Mở một workflow mới.
+
+Nhấn vào biểu tượng ba chấm ở góc trên bên phải.
+
+Chọn “Import from File”.
+
+Nhập tệp Blueprint của AI Agent.
+
+Đảm bảo cập nhật thông tin đăng nhập (credentials) và chỉnh sửa workflow sao cho khớp với tệp và yêu cầu của bạn.
+
+Sau khi tải lên từng workflow riêng biệt, hãy kết nối các workflow phụ dành cho Sora 2 và cắt video (cropping video) một cách chính xác.
+
+Mẫu Airtable
+https://airtable.com/appcftsqfQ6PErcIJ/shrfBzKyddpgorThD
+
+Cách sử dụng:
+
+Sao chép mẫu Airtable này về tài khoản của bạn.
+Kết nối đúng thư mục tương ứng cho từng phần trong n8n.
+
+Các công cụ cần thiết
+(Hãy đảm bảo tạo tài khoản cho từng công cụ, lấy API key và kết nối đúng cách.)
+
+Blotato: https://blotato.com/?ref=dainamiai
+
+n8n: https://n8n.partnerlinks.io/dainamiai
+
+Kie AI: http://kie.ai/
+
+Airtable: https://airtable.com/invite/r/71j4fDcJ
+
+Shotstack: https://shotstack.io/?via=dainami-ai
+
+OpenRouter: https://openrouter.ai/
+
+Google Cloud: https://console.cloud.google.com/

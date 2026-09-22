@@ -1,0 +1,64 @@
+1. Biến Video YouTube Thành: Bản Ghi - Bản Tóm Tắt – Ý Hay Rút Ra
+Chỉ cần dán đường link YouTube vào NotebookLM.
+Nó tự động làm thay bạn 3 việc vốn mất 2–3 tiếng:
+- Tạo bản ghi (transcript) rõ ràng.
+- Tóm tắt theo từng mục.
+- Rút ý chính & bài học – cực hữu ích với video dài 30–90 phút.
+- Phân tích 1 video dài 1 giờ → ra 12 ý chính + 6 bài học + 4 đề xuất hành động
+
+2. Chuyển Podcast Thành "Bài Học Rõ Ràng"
+Tải lên file âm thanh hoặc podcast.
+- Câu lệnh:
+"Viết lại podcast này thành:
+5 ý quan trọng.
+4 ví dụ.
+1 danh sách kiểm tra để áp dụng ngay."
+- NotebookLM sẽ tự chuyển âm thanh thành kiến thức gọn – rõ – dễ hiểu, cực hữu ích cho nghiên cứu thị trường và học kỹ năng mới.2. Chuyển Podcast Thành "Bài Học Rõ Ràng"
+Tải lên file âm thanh hoặc podcast.
+- Câu lệnh:
+"Viết lại podcast này thành:
+5 ý quan trọng.
+4 ví dụ.
+1 danh sách kiểm tra để áp dụng ngay."
+- NotebookLM sẽ tự chuyển âm thanh thành kiến thức gọn – rõ – dễ hiểu, cực hữu ích cho nghiên cứu thị trường và học kỹ năng mới.
+
+3. Tách Toàn Bộ Nội Dung Giá Trị Từ 1 Khóa Học Online
+Chỉ cần dán link bài giảng hoặc tải file bản ghi.
+Câu lệnh: "Tách các mô hình, công thức, so sánh, ví dụ thực tế và các khung tư duy quan trọng trong khóa học."
+Bạn sẽ nhận được bản tóm tắt chứa toàn bộ "chất xám" của khóa học.
+
+4. So Sánh Nhiều Nguồn: PDF + Video + Podcast
+Câu lệnh: "Hãy chỉ ra điểm giống – khác – thiếu của 3 tài liệu này về chủ đề [X]."
+Cực hữu ích để:
+- Nghiên cứu thị trường.
+- Học nhanh nhiều nguồn.
+- Tổng hợp kiến thức theo cách "nhìn là hiểu ngay."
+
+5. Chuyển Tài Liệu Thành Thẻ Ghi Nhớ (Flashcard)
+Câu lệnh: "Từ tài liệu này, hãy tạo 30 thẻ ghi nhớ dạng Hỏi – Đáp, mức độ từ dễ đến khó."
+Dùng cho mọi lĩnh vực: ngoại ngữ, luật, tài chính, marketing, bán hàng, lập trình...
+
+6. Làm Sạch Văn Bản Từ Tài Liệu Scan, Ảnh Chụp, Chữ Viết Tay
+Tải ảnh chụp bằng, sổ tay hoặc ghi chú.
+Câu lệnh: "Chuyển thành văn bản sạch, chia gạch đầu dòng, có đề mục rõ ràng."
+- NotebookLM tự nhận diện chữ → biến thành tài liệu chính chủ.
+- Phù hợp cho giáo viên, học sinh, học viên, người đi họp – đi hội thảo.
+
+7. Trích Toàn Bộ Số Liệu & Chuyển Thành Bảng Rõ Ràng
+Câu lệnh:
+"Trích tất cả số liệu trong tài liệu → tạo thành bảng gồm 3 cột: số liệu – nguồn – ý nghĩa."
+NotebookLM sẽ tự tìm:
+- Số liệu thống kê.
+- Tỷ lệ phần trăm.
+- Mốc thời gian.
+- Con số tài chính.
+Dùng để viết báo cáo, phân tích, thuyết trình.
+
+8. Tạo Bài Viết Hoàn Chỉnh Từ 1 Tài Liệu
+Đây là "vũ khí của người làm nội dung & marketing".
+Câu lệnh: "Từ tài liệu này, hãy tạo:
+1 bài Facebook (gồm mở bài thu hút + 7 bình luận mở rộng).
+1 bộ slide 7 trang.
+1 kịch bản video 60 giây.
+1 email bán hàng."
+NotebookLM tạo nội dung nhanh như ChatGPT nhưng bám 100% tài liệu gốc.

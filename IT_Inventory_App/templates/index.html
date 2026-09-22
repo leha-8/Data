@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Quản Lý Vật Tư & Thiết Bị Mạng IT</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="bg-light">
+
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-navy shadow-sm sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#">
+                <i class="bi bi-hdd-network-fill text-warning fs-4"></i>
+                <span>IT INVENTORY & NETWORK ASSETS</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-pills ms-lg-4 gap-1">
+                    <li class="nav-item">
+                        <button class="nav-link active d-flex align-items-center gap-2" id="tab-dashboard-btn" onclick="switchTab('dashboard')">
+                            <i class="bi bi-speedometer2"></i> Dashboard
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link d-flex align-items-center gap-2" id="tab-items-btn" onclick="switchTab('items')">
+                            <i class="bi bi-box-seam"></i> Danh Mục Vật Tư
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link d-flex align-items-center gap-2" id="tab-scanner-btn" onclick="switchTab('scanner')">
+                            <i class="bi bi-radar text-warning"></i> Quét IP LAN
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link d-flex align-items-center gap-2" id="tab-transactions-btn" onclick="switchTab('transactions')">
+                            <i class="bi bi-arrow-left-right"></i> Nhập / Xuất Kho
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link d-flex align-items-center gap-2" id="tab-reports-btn" onclick="switchTab('reports')">
+                            <i class="bi bi-file-earmark-excel"></i> Xuất Báo Cáo
+                        </button>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-2">
+                    <span class="badge bg-dark-subtle text-white border border-secondary px-3 py-2 rounded-pill font-monospace" title="Địa chỉ IP truy cập LAN">
+                        <i class="bi bi-broadcast text-success me-1"></i> LAN: http://{{ local_ip }}:8000
+                    </span>
+                    <button class="btn btn-primary btn-sm d-flex align-items-center gap-1 shadow-sm" onclick="openCreateItemModal()">
+                        <i class="bi bi-plus-circle"></i> Thêm Thiết Bị
+                    </button>
+                    <button class="btn btn-warning btn-sm d-flex align-items-center gap-1 shadow-sm text-dark fw-semibold" onclick="openCreateTxModal()">
+                        <i class="bi bi-arrow-left-right"></i> Xuất / Nhập Kho
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="container-fluid px-4 py-4">
+
+        <!-- ================= TAB 1: DASHBOARD ================= -->
+        <section id="section-dashboard">
+            <!-- Stat Cards -->
+            <div class="row g-3 mb-4">
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="card stat-card border-0 shadow-sm bg-gradient-blue text-white h-100">
+                        <div class="card-body d-flex justify-content-between align-items-center">
+                            <div>
+                                <div class="text-white-50 text-uppercase fw-semibold small">Chủng Loại Vật Tư</div>
+                                <div class="fs-2 fw-bold mt-1" id="dash-total-types">0</div>
+                                <small class="text-white-50">Model thiết bị trong hệ thống</small>
+                            </div>
+                            <div class="stat-icon bg-white bg-opacity-25 rounded-circle p-3">
+                                <i class="bi bi-boxes fs-3"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="card stat-card border-0 shadow-sm bg-gradient-green text-white h-100">
+                        <div class="card-body d-flex justify-content-between align-items-center">
+                            <div>
+                                <div class="text-white-50 text-uppercase fw-semibold small">Tổng Số Lượng Tồn Kho</div>
+                                <div class="fs-2 fw-bold mt-1" id="dash-total-quantity">0</div>
+                                <small class="text-white-50">Số lượng đơn vị khả dụng</small>
+                            </div>
+                            <div class="stat-icon bg-white bg-opacity-25 rounded-circle p-3">
+                                <i class="bi bi-check2-circle fs-3"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="card stat-card border-0 shadow-sm bg-gradient-amber text-white h-100">
+                        <div class="card-body d-flex justify-content-between align-items-center">
+                            <div>
+                                <div class="text-white-50 text-uppercase fw-semibold small">Cảnh Báo Sắp Hết Hàng</div>
+                                <div class="fs-2 fw-bold mt-1" id="dash-low-stock">0</div>
+                                <small class="text-white-50">Cần liên hệ đặt hàng thêm</small>
+                            </div>
+                            <div class="stat-icon bg-white bg-opacity-25 rounded-circle p-3">
+                                <i class="bi bi-exclamation-triangle-fill fs-3"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-xl-3">
+                    <div class="card stat-card border-0 shadow-sm bg-gradient-purple text-white h-100">
+                        <div class="card-body d-flex justify-content-between align-items-center">
+                            <div>
+                                <div class="text-white-50 text-uppercase fw-semibold small">Thiết Bị Đang Bảo Hành</div>
+                                <div class="fs-2 fw-bold mt-1" id="dash-warranty-count">0</div>
+                                <small class="text-white-50">Gửi hãng hoặc đối tác xử lý</small>
+                            </div>
+                            <div class="stat-icon bg-white bg-opacity-25 rounded-circle p-3">
+                                <i class="bi bi-shield-check fs-3"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Low Stock Items Table -->
+                <div class="col-12 col-lg-7">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-header bg-white border-0 py-3 d-flex justify-content-between align-items-center">
+                            <h6 class="card-title mb-0 fw-bold d-flex align-items-center gap-2 text-danger">
+                                <i class="bi bi-bell-fill"></i> Thiết Bị Sắp Hết Hàng / Cần Nhập Thêm
+                            </h6>
+                            <button class="btn btn-outline-primary btn-sm" onclick="switchTab('items')">Xem tất cả</button>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-hover align-middle mb-0">
+                                    <thead class="table-light text-secondary small text-uppercase">
+                                        <tr>
+                                            <th>Tên Thiết Bị</th>
+                                            <th>Cơ Sở</th>
+                                            <th>Tồn Kho</th>
+                                            <th>Vị Trí</th>
+                                            <th class="text-end">Thao Tác</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="dash-low-stock-body">
+                                        <!-- Dynamic rows -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Transactions -->
+                <div class="col-12 col-lg-5">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-header bg-white border-0 py-3 d-flex justify-content-between align-items-center">
+                            <h6 class="card-title mb-0 fw-bold d-flex align-items-center gap-2 text-primary">
+                                <i class="bi bi-clock-history"></i> Giao Dịch Kho Gần Đây
+                            </h6>
+                            <button class="btn btn-outline-primary btn-sm" onclick="switchTab('transactions')">Chi tiết</button>
+                        </div>
+                        <div class="card-body p-0">
+                            <ul class="list-group list-group-flush" id="dash-recent-txs">
+                                <!-- Dynamic recent tx items -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Categories, Sites and Status Overview -->
+            <div class="row g-4 mt-1">
+                <div class="col-12 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-header bg-white border-0 py-3">
+                            <h6 class="card-title mb-0 fw-bold"><i class="bi bi-diagram-3-fill text-info me-2"></i>Thống Kê Theo Chủng Loại</h6>
+                        </div>
+                        <div class="card-body" id="dash-category-list">
+                            <!-- Category bars -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-header bg-white border-0 py-3">
+                            <h6 class="card-title mb-0 fw-bold"><i class="bi bi-buildings text-primary me-2"></i>Phân Bổ Theo Cơ Sở / Chi Nhánh</h6>
+                        </div>
+                        <div class="card-body" id="dash-site-list">
+                            <!-- Site bars -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-header bg-white border-0 py-3">
+                            <h6 class="card-title mb-0 fw-bold"><i class="bi bi-pie-chart-fill text-success me-2"></i>Phân Bổ Theo Trạng Thái</h6>
+                        </div>
+                        <div class="card-body" id="dash-status-list">
+                            <!-- Status badges -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TAB 2: DANH MỤC VẬT TƯ ================= -->
+        <section id="section-items" class="d-none">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <!-- Filters & Search Toolbar -->
+                    <div class="row g-2 mb-4 align-items-center">
+                        <div class="col-12 col-md-3">
+                            <div class="input-group">
+                                <span class="input-group-text bg-white"><i class="bi bi-search text-muted"></i></span>
+                                <input type="text" id="items-search" class="form-control" placeholder="Tìm tên, serial, vị trí..." oninput="loadItems()">
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-2">
+                            <select id="items-filter-site" class="form-select" onchange="loadItems()">
+                                <option value="">-- Tất cả cơ sở --</option>
+                            </select>
+                        </div>
+                        <div class="col-6 col-md-2">
+                            <select id="items-filter-category" class="form-select" onchange="loadItems()">
+                                <option value="">-- Tất cả phân loại --</option>
+                                <option value="Router Gateway">Router Gateway</option>
+                                <option value="Core Switch">Core Switch</option>
+                                <option value="Wi-Fi Access Point">Wi-Fi Access Point</option>
+                                <option value="Tường lửa (Firewall)">Tường lửa (Firewall)</option>
+                                <option value="Vật tư phụ / Dây cáp">Vật tư phụ / Dây cáp</option>
+                                <option value="Phụ kiện quang">Phụ kiện quang</option>
+                                <option value="Nguồn / UPS">Nguồn / UPS</option>
+                                <option value="Máy tính / Máy chủ">Máy tính / Máy chủ</option>
+                                <option value="Thiết bị mạng LAN">Thiết bị mạng LAN</option>
+                            </select>
+                        </div>
+                        <div class="col-6 col-md-2">
+                            <select id="items-filter-status" class="form-select" onchange="loadItems()">
+                                <option value="">-- Trạng thái --</option>
+                                <option value="Sẵn sàng trong kho">Sẵn sàng trong kho</option>
+                                <option value="Đang sử dụng">Đang sử dụng</option>
+                                <option value="Sắp hết hàng">Sắp hết hàng</option>
+                                <option value="Hết hàng">Hết hàng</option>
+                                <option value="Đang bảo hành">Đang bảo hành</option>
+                            </select>
+                        </div>
+                        <div class="col-6 col-md-3 d-flex justify-content-end gap-2">
+                            <button class="btn btn-outline-secondary" onclick="resetItemsFilter()" title="Đặt lại bộ lọc">
+                                <i class="bi bi-arrow-counterclockwise"></i>
+                            </button>
+                            <a href="/api/export/inventory" class="btn btn-outline-success d-flex align-items-center gap-1" id="btn-export-inventory">
+                                <i class="bi bi-file-earmark-excel"></i> Xuất Excel
+                            </a>
+                            <button class="btn btn-primary d-flex align-items-center gap-1" onclick="openCreateItemModal()">
+                                <i class="bi bi-plus-lg"></i> Thêm Mới
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Items Table -->
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle border">
+                            <thead class="table-light text-secondary small text-uppercase">
+                                <tr>
+                                    <th style="width: 45px;">STT</th>
+                                    <th>Tên Thiết Bị / Vật Tư</th>
+                                    <th>Phân Loại</th>
+                                    <th>Cơ Sở / Chi Nhánh</th>
+                                    <th>Serial Number (S/N)</th>
+                                    <th class="text-center">Số Lượng</th>
+                                    <th>Vị Trí Kho</th>
+                                    <th>Trạng Thái</th>
+                                    <th>Hạn Bảo Hành</th>
+                                    <th class="text-end" style="width: 140px;">Thao Tác</th>
+                                </tr>
+                            </thead>
+                            <tbody id="items-table-body">
+                                <!-- Dynamic rows -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TAB 3: QUÉT IP LAN & PHÁT HIỆN THIẾT BỊ ================= -->
+        <section id="section-scanner" class="d-none">
+            <!-- Header & Intro -->
+            <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+                <div>
+                    <h4 class="fw-bold mb-1 d-flex align-items-center gap-2 text-primary">
+                        <i class="bi bi-radar text-warning"></i> Quét Dải Mạng LAN & Tự Động Nhận Diện Thiết Bị
+                    </h4>
+                    <p class="text-secondary small mb-0">Hỗ trợ tự động tính dải Subnet mạng đang kết nối, chọn cơ sở lưu động hoặc nhập dải IP tùy chỉnh.</p>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <span class="badge bg-primary bg-opacity-10 text-primary border border-primary-subtle px-3 py-2 fs-6">
+                        <i class="bi bi-laptop me-1"></i> IP Máy Này: <span id="scanner-current-ip" class="font-monospace fw-bold">{{ local_ip }}</span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Scan Configuration Card -->
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-header bg-white border-bottom py-3">
+                    <h6 class="card-title mb-0 fw-bold d-flex align-items-center gap-2">
+                        <i class="bi bi-sliders2 text-primary"></i> 1. Cấu Hình Dải Mạng Cần Quét & Cơ Sở Gán Dữ Liệu
+                    </h6>
+                </div>
+                <div class="card-body p-4">
+                    <div class="row g-4">
+                        <!-- Option 1: Mode selection -->
+                        <div class="col-12 col-lg-8">
+                            <label class="form-label fw-bold text-dark mb-2">Chọn Phương Thức Xác Định Dải IP:</label>
+                            
+                            <div class="d-flex flex-column gap-3">
+                                <!-- Mode A: Auto-detect -->
+                                <div class="form-check p-3 rounded-3 border scan-mode-card active" id="mode-card-auto" onclick="selectScanMode('auto')">
+                                    <input class="form-check-input ms-0 me-3" type="radio" name="subnet_mode" id="mode-auto" value="auto" checked onchange="onScanModeChanged()">
+                                    <label class="form-check-label w-100 cursor-pointer" for="mode-auto">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="fw-bold text-dark">
+                                                <i class="bi bi-magic text-primary me-1"></i> a) Dải IP hiện tại của máy (Tự động phát hiện)
+                                            </div>
+                                            <span class="badge bg-success text-white px-2 py-1"><i class="bi bi-broadcast me-1"></i>Card Mạng Hiện Tại</span>
+                                        </div>
+                                        <div class="text-muted small mt-1">
+                                            Hệ thống tự động phát hiện card mạng và tính toán Subnet: 
+                                            <strong class="text-primary font-monospace fs-6" id="detected-subnet-badge">Đang nhận dạng...</strong>
+                                        </div>
+                                    </label>
+                                </div>
+
+                                <!-- Mode B: Preset Sites -->
+                                <div class="form-check p-3 rounded-3 border scan-mode-card" id="mode-card-preset" onclick="selectScanMode('preset')">
+                                    <input class="form-check-input ms-0 me-3" type="radio" name="subnet_mode" id="mode-preset" value="preset" onchange="onScanModeChanged()">
+                                    <label class="form-check-label w-100 cursor-pointer" for="mode-preset">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <div class="fw-bold text-dark">
+                                                <i class="bi bi-building text-info me-1"></i> b) Dải IP cấu hình sẵn theo Cơ sở / Chi nhánh
+                                            </div>
+                                            <span class="badge bg-info-subtle text-info-emphasis px-2 py-1">Danh Mục Cơ Sở</span>
+                                        </div>
+                                        <div class="row g-2">
+                                            <div class="col-12 col-md-7">
+                                                <select id="scanner-preset-select" class="form-select" onchange="onPresetSiteSelected()" disabled>
+                                                    <!-- Dynamically populated -->
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-md-5">
+                                                <div class="input-group">
+                                                    <span class="input-group-text bg-light small">Subnet</span>
+                                                    <input type="text" id="scanner-preset-subnet" class="form-control font-monospace bg-light" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+
+                                <!-- Mode C: Custom IP Range -->
+                                <div class="form-check p-3 rounded-3 border scan-mode-card" id="mode-card-custom" onclick="selectScanMode('custom')">
+                                    <input class="form-check-input ms-0 me-3" type="radio" name="subnet_mode" id="mode-custom" value="custom" onchange="onScanModeChanged()">
+                                    <label class="form-check-label w-100 cursor-pointer" for="mode-custom">
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <div class="fw-bold text-dark">
+                                                <i class="bi bi-pencil-square text-warning me-1"></i> c) Nhập dải IP tùy chỉnh linh hoạt
+                                            </div>
+                                            <span class="badge bg-warning-subtle text-warning-emphasis px-2 py-1">Tùy Biến CIDR</span>
+                                        </div>
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-white font-monospace"><i class="bi bi-diagram-2"></i></span>
+                                            <input type="text" id="scanner-custom-input" class="form-control font-monospace" placeholder="vd: 192.168.1.0/24 hoặc 10.0.0.0/24 hoặc 172.16.1.0/24" disabled>
+                                        </div>
+                                        <small class="text-secondary d-block mt-1">Định dạng chuẩn CIDR (khuyến nghị dải /24 gồm 254 IP để quét nhanh trong 2-3 giây).</small>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Option 2: Target Site selection & Scan Trigger -->
+                        <div class="col-12 col-lg-4 d-flex flex-column justify-content-between">
+                            <div class="bg-light p-3 rounded-3 border h-100 d-flex flex-column justify-content-between">
+                                <div>
+                                    <h6 class="fw-bold text-dark mb-2"><i class="bi bi-geo-alt text-danger me-1"></i> Gán Cơ Sở Cho Thiết Bị Quét Được</h6>
+                                    <p class="small text-secondary mb-2">Khi quét xong, các thiết bị mới được thêm sẽ tự động thuộc về Cơ sở này:</p>
+                                    <select id="scanner-target-site" class="form-select mb-3 fw-semibold">
+                                        <!-- Populated from /api/sites -->
+                                    </select>
+                                    <div class="p-2 bg-white rounded-2 border small text-muted">
+                                        <i class="bi bi-info-circle text-primary me-1"></i>
+                                        <span>Quét ICMP song song, đọc bảng MAC ARP, kiểm tra cổng quản trị (80/443/22/23) và tự động đối chiếu với dữ liệu kho hiện có.</span>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <button id="btn-start-scan" class="btn btn-primary btn-lg w-100 fw-bold py-3 shadow-sm d-flex align-items-center justify-content-center gap-2" onclick="startLanScan()">
+                                        <i class="bi bi-radar fs-4"></i>
+                                        <span id="btn-scan-text">BẮT ĐẦU QUÉT MẠNG</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Live Scan Status Alert (Hidden by default) -->
+            <div id="scanner-status-box" class="alert alert-info d-none align-items-center gap-3 shadow-sm" role="alert">
+                <div class="spinner-border text-primary" role="status" style="width: 2rem; height: 2rem;">
+                    <span class="visually-hidden">Đang quét...</span>
+                </div>
+                <div class="flex-grow-1">
+                    <h6 class="alert-heading fw-bold mb-1" id="scanner-status-title">Đang quét dải mạng...</h6>
+                    <div class="small" id="scanner-status-desc">Vui lòng chờ khoảng 2-3 giây. Hệ thống đang gửi tín hiệu đa luồng và đọc bảng MAC ARP...</div>
+                </div>
+            </div>
+
+            <!-- Scan Results Card -->
+            <div class="card border-0 shadow-sm" id="scanner-results-card">
+                <div class="card-header bg-white border-bottom py-3 d-flex justify-content-between align-items-center flex-wrap gap-2">
+                    <h6 class="card-title mb-0 fw-bold d-flex align-items-center gap-2">
+                        <i class="bi bi-list-check text-success"></i> 2. Danh Sách Thiết Bị Đang Hoạt Động Trên Dải Mạng
+                    </h6>
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="badge bg-secondary-subtle text-secondary-emphasis px-3 py-2" id="scanner-summary-badge">
+                            Chưa thực hiện quét
+                        </span>
+                    </div>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle mb-0">
+                            <thead class="table-light text-secondary small text-uppercase">
+                                <tr>
+                                    <th style="width: 45px;">STT</th>
+                                    <th>Địa Chỉ IP</th>
+                                    <th>Địa Chỉ MAC</th>
+                                    <th>Nhà Sản Xuất (Vendor)</th>
+                                    <th>Cổng Quản Trị</th>
+                                    <th>Gợi Ý Phân Loại</th>
+                                    <th>Trạng Thái Kho</th>
+                                    <th class="text-end" style="width: 170px;">Thao Tác</th>
+                                </tr>
+                            </thead>
+                            <tbody id="scanner-table-body">
+                                <tr>
+                                    <td colspan="8" class="text-center text-muted py-5">
+                                        <i class="bi bi-radar fs-1 text-secondary opacity-50 d-block mb-2"></i>
+                                        Nhấn <strong>"BẮT ĐẦU QUÉT MẠNG"</strong> phía trên để tìm kiếm thiết bị đang hoạt động.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TAB 4: NHẬP / XUẤT KHO ================= -->
+        <section id="section-transactions" class="d-none">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <!-- Filters Toolbar -->
+                    <div class="row g-2 mb-4 align-items-center">
+                        <div class="col-12 col-md-5">
+                            <div class="input-group">
+                                <span class="input-group-text bg-white"><i class="bi bi-search text-muted"></i></span>
+                                <input type="text" id="tx-search" class="form-control" placeholder="Tìm người nhận, phòng ban, tên thiết bị, ghi chú..." oninput="loadTransactions()">
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <select id="tx-filter-type" class="form-select" onchange="loadTransactions()">
+                                <option value="">-- Tất cả loại giao dịch --</option>
+                                <option value="Xuất kho">Xuất kho (Cấp phát)</option>
+                                <option value="Nhập kho">Nhập kho (Bổ sung)</option>
+                                <option value="Thu hồi">Thu hồi (Hoàn trả)</option>
+                            </select>
+                        </div>
+                        <div class="col-6 col-md-4 d-flex justify-content-end gap-2">
+                            <a href="/api/export/transactions" class="btn btn-outline-success d-flex align-items-center gap-1">
+                                <i class="bi bi-file-earmark-excel"></i> Xuất Excel
+                            </a>
+                            <button class="btn btn-warning text-dark fw-semibold d-flex align-items-center gap-1" onclick="openCreateTxModal()">
+                                <i class="bi bi-arrow-left-right"></i> Tạo Phiếu Kho Mới
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Transactions Table -->
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle border">
+                            <thead class="table-light text-secondary small text-uppercase">
+                                <tr>
+                                    <th style="width: 90px;">Mã GD</th>
+                                    <th>Thiết Bị Giao Dịch</th>
+                                    <th class="text-center">Loại GD</th>
+                                    <th class="text-center">Số Lượng</th>
+                                    <th>Người Nhận / Phòng Ban</th>
+                                    <th>Người Thực Hiện</th>
+                                    <th>Mục Đích / Ghi Chú</th>
+                                    <th>Thời Gian</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tx-table-body">
+                                <!-- Dynamic rows -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TAB 5: XUẤT BÁO CÁO EXCEL ================= -->
+        <section id="section-reports" class="d-none">
+            <div class="row g-4">
+                <div class="col-12 col-md-6">
+                    <div class="card border-0 shadow-sm h-100 p-3">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <div class="bg-primary bg-opacity-10 text-primary p-3 rounded-3 fs-2">
+                                    <i class="bi bi-file-earmark-spreadsheet-fill"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Báo Cáo Toàn Bộ Danh Mục Vật Tư IT</h5>
+                                    <p class="text-muted small mb-0">Xuất danh sách thiết bị, cơ sở chi nhánh, số lượng tồn kho, vị trí kệ tủ và hạn bảo hành.</p>
+                                </div>
+                            </div>
+                            <ul class="list-unstyled text-secondary small mb-4">
+                                <li><i class="bi bi-check2 text-success me-2"></i>Bao gồm tất cả Router, Switch, AP, Cáp mạng, Transceiver, SFP...</li>
+                                <li><i class="bi bi-check2 text-success me-2"></i>Phân loại chi tiết theo Cơ sở / Chi nhánh (Chi nhánh Bình Hưng, Cầu Giấy, Đà Nẵng, TP.HCM...)</li>
+                                <li><i class="bi bi-check2 text-success me-2"></i>Định dạng chuẩn Microsoft Excel (.xlsx) có màu sắc header</li>
+                            </ul>
+                            <a href="/api/export/inventory" class="btn btn-primary w-100 py-2 fw-semibold">
+                                <i class="bi bi-download me-2"></i> Tải Về File Excel Vật Tư
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="card border-0 shadow-sm h-100 p-3">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center gap-3 mb-3">
+                                <div class="bg-success bg-opacity-10 text-success p-3 rounded-3 fs-2">
+                                    <i class="bi bi-journal-text"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Báo Cáo Lịch Sử Nhập / Xuất Kho</h5>
+                                    <p class="text-muted small mb-0">Nhật ký chi tiết các lần xuất cấp phát thiết bị, bàn giao cho nhân viên & phòng ban.</p>
+                                </div>
+                            </div>
+                            <ul class="list-unstyled text-secondary small mb-4">
+                                <li><i class="bi bi-check2 text-success me-2"></i>Theo dõi ai đã lấy thiết bị gì, cấp cho phòng ban nào</li>
+                                <li><i class="bi bi-check2 text-success me-2"></i>Phân loại rõ ràng: Xuất kho, Nhập bổ sung hoặc Thu hồi</li>
+                                <li><i class="bi bi-check2 text-success me-2"></i>Có dấu mốc thời gian chi tiết từng phút</li>
+                            </ul>
+                            <a href="/api/export/transactions" class="btn btn-success w-100 py-2 fw-semibold">
+                                <i class="bi bi-download me-2"></i> Tải Về File Excel Giao Dịch
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= MODAL: THÊM / SỬA THIẾT BỊ ================= -->
+    <div class="modal fade" id="itemModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-navy text-white">
+                    <h5 class="modal-title fw-bold" id="itemModalTitle">Thêm Thiết Bị / Vật Tư Mới</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <form id="itemForm" onsubmit="submitItemForm(event)">
+                    <div class="modal-body p-4">
+                        <input type="hidden" id="item-id">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-8">
+                                <label class="form-label fw-semibold">Tên Thiết Bị / Vật Tư <span class="text-danger">*</span></label>
+                                <input type="text" id="item-name" class="form-control" placeholder="vd: Router DrayTek Vigor 2927" required>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <label class="form-label fw-semibold">Phân Loại <span class="text-danger">*</span></label>
+                                <select id="item-category" class="form-select" required>
+                                    <option value="">-- Chọn loại --</option>
+                                    <option value="Router Gateway">Router Gateway</option>
+                                    <option value="Core Switch">Core Switch</option>
+                                    <option value="Wi-Fi Access Point">Wi-Fi Access Point</option>
+                                    <option value="Tường lửa (Firewall)">Tường lửa (Firewall)</option>
+                                    <option value="Vật tư phụ / Dây cáp">Vật tư phụ / Dây cáp</option>
+                                    <option value="Phụ kiện quang">Phụ kiện quang</option>
+                                    <option value="Nguồn / UPS">Nguồn / UPS</option>
+                                    <option value="Máy tính / Máy chủ">Máy tính / Máy chủ</option>
+                                    <option value="Thiết bị mạng LAN">Thiết bị mạng LAN</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label class="form-label fw-semibold">Cơ Sở / Chi Nhánh <span class="text-danger">*</span></label>
+                                <select id="item-site" class="form-select" required>
+                                    <!-- Populated dynamically from /api/sites -->
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="form-label fw-semibold">Serial Number (S/N hoặc MAC)</label>
+                                <input type="text" id="item-sn" class="form-control font-monospace" placeholder="vd: DT2927-VN8891 hoặc 00-50-7F-XX-XX-XX">
+                            </div>
+
+                            <div class="col-6 col-md-3">
+                                <label class="form-label fw-semibold">Số Lượng <span class="text-danger">*</span></label>
+                                <input type="number" id="item-qty" class="form-control text-center" min="0" value="1" required>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <label class="form-label fw-semibold">Đơn Vị Tính</label>
+                                <input type="text" id="item-unit" class="form-control text-center" value="Cái">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="form-label fw-semibold">Vị Trí Lưu Kho / IP</label>
+                                <input type="text" id="item-location" class="form-control" placeholder="vd: Kệ A1, Tủ Rack Server, IP 192.168.1.1">
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label class="form-label fw-semibold">Trạng Thái</label>
+                                <select id="item-status" class="form-select">
+                                    <option value="Sẵn sàng trong kho">Sẵn sàng trong kho</option>
+                                    <option value="Đang sử dụng">Đang sử dụng</option>
+                                    <option value="Sắp hết hàng">Sắp hết hàng</option>
+                                    <option value="Hết hàng">Hết hàng</option>
+                                    <option value="Đang bảo hành">Đang bảo hành</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="form-label fw-semibold">Hạn Bảo Hành</label>
+                                <input type="date" id="item-warranty" class="form-control">
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Ghi Chú Thêm</label>
+                                <input type="text" id="item-notes" class="form-control" placeholder="Thông số kỹ thuật, cổng mở, địa chỉ IP...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer bg-light">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                        <button type="submit" class="btn btn-primary px-4 fw-semibold" id="btn-save-item">Lưu Dữ Liệu</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= MODAL: TẠO GIAO DỊCH NHẬP / XUẤT ================= -->
+    <div class="modal fade" id="txModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-dark text-white">
+                    <h5 class="modal-title fw-bold">Tạo Phiếu Nhập / Xuất / Thu Hồi Kho</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <form id="txForm" onsubmit="submitTxForm(event)">
+                    <div class="modal-body p-4">
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <label class="form-label fw-semibold">Loại Giao Dịch <span class="text-danger">*</span></label>
+                                <select id="tx-type" class="form-select fw-bold" required onchange="onTxTypeChange()">
+                                    <option value="Xuất kho">Xuất kho (Cấp phát cho phòng ban/khách)</option>
+                                    <option value="Nhập kho">Nhập kho (Bổ sung thiết bị mới)</option>
+                                    <option value="Thu hồi">Thu hồi (Nhận lại thiết bị từ phòng ban)</option>
+                                </select>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="form-label fw-semibold">Thiết Bị / Vật Tư <span class="text-danger">*</span></label>
+                                <select id="tx-item-id" class="form-select" required onchange="onTxItemSelect()">
+                                    <option value="">-- Chọn thiết bị trong kho --</option>
+                                </select>
+                                <small class="text-muted d-block mt-1" id="tx-stock-hint">Tồn kho hiện tại: —</small>
+                            </div>
+
+                            <div class="col-12 col-md-4">
+                                <label class="form-label fw-semibold">Số Lượng <span class="text-danger">*</span></label>
+                                <input type="number" id="tx-qty" class="form-control text-center fs-5 fw-bold" min="1" value="1" required>
+                            </div>
+                            <div class="col-12 col-md-8">
+                                <label class="form-label fw-semibold">Người Nhận Bàn Giao</label>
+                                <input type="text" id="tx-recipient" class="form-control" placeholder="vd: Trần Thị Bình (NV Kế toán) hoặc Anh Hùng (Khách hàng)">
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label class="form-label fw-semibold">Phòng Ban / Địa Điểm Sử Dụng</label>
+                                <input type="text" id="tx-department" class="form-control" placeholder="vd: Phòng Kế toán - Tầng 2, Khách sạn Mường Thanh...">
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label class="form-label fw-semibold">Người Thực Hiện (Kỹ thuật/Thủ kho)</label>
+                                <input type="text" id="tx-performer" class="form-control" value="Kỹ thuật IT" required>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Mục Đích / Ghi Chú</label>
+                                <textarea id="tx-notes" class="form-control" rows="2" placeholder="Lý do cấp phát, thay thế thiết bị hỏng, dự án..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer bg-light">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+                        <button type="submit" class="btn btn-warning text-dark fw-bold px-4">Xác Nhận Thực Hiện</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 9999;">
+        <div id="liveToast" class="toast align-items-center text-white border-0 shadow" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body fs-6" id="toastMessage">Thông báo</div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

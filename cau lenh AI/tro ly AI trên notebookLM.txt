@@ -1,0 +1,65 @@
+1️⃣ Biến NotebookLM thành trợ lý AI cá nhân
+🎯 Mục tiêu: AI hiểu cách bạn làm việc và học tập
+Prompt:
+“Hãy đóng vai trò trợ lý AI cá nhân của tôi.
+Dựa trên các tài liệu tôi tải lên, hãy:
+Tóm tắt các ý quan trọng
+Ghi nhớ kiến thức chính
+Giải thích theo cách dễ hiểu
+Gợi ý cách áp dụng thực tế
+Khi trả lời:
+Viết ngắn gọn
+Có ví dụ minh họa
+Dễ hiểu và thực tế.”
+2️⃣ Biến NotebookLM thành chuyên gia tạo nội dung
+🎯 Mục tiêu: Viết content nhanh hơn
+Prompt:
+“Dựa trên tài liệu của tôi, hãy hỗ trợ tạo nội dung gồm:
+Ý tưởng bài viết
+Tiêu đề thu hút
+Nội dung chính
+Ví dụ minh họa
+Hãy viết theo phong cách đơn giản, dễ đọc và dễ áp dụng.”
+3️⃣ Biến NotebookLM thành giáo viên riêng
+🎯 Mục tiêu: Học nhanh và hiểu sâu hơn
+Prompt:
+“Hãy dạy tôi dựa trên các tài liệu đã tải lên như một gia sư cá nhân.
+Bao gồm:
+Tóm tắt kiến thức
+Giải thích dễ hiểu
+Ví dụ thực tế
+Câu hỏi luyện tập.”
+4️⃣ Tìm thông tin quan trọng cực nhanh
+🎯 Mục tiêu: Không cần đọc toàn bộ tài liệu
+Prompt:
+“Hãy tìm trong tài liệu của tôi:
+Những ý quan trọng nhất
+Các điểm cần ghi nhớ
+Những sai lầm phổ biến cần tránh
+5️⃣ Biến NotebookLM thành hệ thống ôn tập thông minh
+🎯 Mục tiêu: Ghi nhớ lâu hơn
+Prompt:
+“Dựa trên tài liệu của tôi, hãy tạo:
+Flashcard
+Câu hỏi trắc nghiệm
+Bản tóm tắt
+Checklist kiến thức cần nhớ.”
+Trình bày ngắn gọn và rõ ràng.”
+6️⃣ Biến NotebookLM thành cố vấn thực chiến
+🎯 Mục tiêu: Ứng dụng kiến thức vào công việc thực tế
+Prompt:
+“Dựa trên tài liệu của tôi, hãy hướng dẫn cách áp dụng vào thực tế.
+Bao gồm:
+Các bước thực hiện
+Ví dụ cụ thể
+Những sai lầm nên tránh.”
+7️⃣ Biến NotebookLM thành “bộ não thứ hai”
+🎯 Mục tiêu: Xây dựng kho kiến thức cá nhân
+Prompt:
+“Hãy tổng hợp toàn bộ tài liệu của tôi thành một hệ thống kiến thức hoàn chỉnh.
+Bao gồm:
+Các chủ đề chính
+Kiến thức quan trọng
+Mối liên hệ giữa các chủ đề
+Những điều cần ghi nhớ.”
+💾 Lưu lại bài viết này — bạn sẽ cần dùng ít nhất 1 trong các prompt trên trong tuần tới.

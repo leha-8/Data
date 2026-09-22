@@ -1,0 +1,106 @@
+name: "SOAR Network Isolation (Ruijie & DrayTek)"
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_ip:
+        description: "Địa chỉ IP độc hại / bị nhiễm cần cô lập (Compromised IP)"
+        required: true
+        type: string
+      reason:
+        description: "Lý do cô lập / Tên sự cố an ninh"
+        required: false
+        default: "Cảnh báo SIEM phát hiện hành vi độc hại"
+        type: string
+      issue_number:
+        description: "Số hiệu GitHub Issue để phản hồi trạng thái thực thi"
+        required: false
+        type: string
+      device_target:
+        description: "Thiết bị áp dụng lệnh chặn"
+        required: true
+        default: "all"
+        type: choice
+        options:
+          - "all"
+          - "ruijie"
+          - "draytek"
+      dry_run:
+        description: "Chế độ mô phỏng kiểm thử (Dry Run - Không tác động phần cứng)"
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  isolate-host:
+    name: "Execute Hardware Isolation Rules"
+    # Ghi chú: Nếu thiết bị Ruijie và DrayTek nằm trong mạng LAN On-Premise không mở port SSH ra Internet,
+    # hãy đổi 'ubuntu-latest' thành 'self-hosted' (chạy runner ngay trong mạng nội bộ công ty).
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      issues: write
+
+    steps:
+      - name: "Checkout Code Repository"
+        uses: actions/checkout@v4
+
+      - name: "Set up Python Environment"
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: "Install Isolation Dependencies"
+        run: |
+          python -m pip install --upgrade pip
+          pip install netmiko httpx pydantic pydantic-settings python-dotenv
+
+      - name: "Run Network Isolation Script"
+        env:
+          # GitHub Context
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+
+          # Ruijie Switch/Gateway Credentials & Parameters (From GitHub Secrets)
+          RUIJIE_HOST: ${{ secrets.RUIJIE_HOST || '192.168.1.2' }}
+          RUIJIE_USERNAME: ${{ secrets.RUIJIE_USERNAME || 'admin' }}
+          RUIJIE_PASSWORD: ${{ secrets.RUIJIE_PASSWORD }}
+          RUIJIE_SECRET: ${{ secrets.RUIJIE_SECRET }}
+          RUIJIE_SSH_PORT: ${{ secrets.RUIJIE_SSH_PORT || '22' }}
+          RUIJIE_ACL_NAME: ${{ secrets.RUIJIE_ACL_NAME || 'ACL_SOAR_BLOCK' }}
+          RUIJIE_VLAN_INTERFACE: ${{ secrets.RUIJIE_VLAN_INTERFACE || 'GigabitEthernet 0/1' }}
+
+          # DrayTek Vigor Router Credentials & Parameters (From GitHub Secrets)
+          DRAYTEK_HOST: ${{ secrets.DRAYTEK_HOST || '192.168.1.1' }}
+          DRAYTEK_USERNAME: ${{ secrets.DRAYTEK_USERNAME || 'admin' }}
+          DRAYTEK_PASSWORD: ${{ secrets.DRAYTEK_PASSWORD }}
+          DRAYTEK_SSH_PORT: ${{ secrets.DRAYTEK_SSH_PORT || '22' }}
+          DRAYTEK_FILTER_SET: ${{ secrets.DRAYTEK_FILTER_SET || '2' }}
+          DRAYTEK_FILTER_RULE: ${{ secrets.DRAYTEK_FILTER_RULE || '2' }}
+
+        run: |
+          echo "=================================================="
+          echo "Bắt đầu quy trình cô lập IP: ${{ inputs.target_ip }}"
+          echo "Thiết bị mục tiêu: ${{ inputs.device_target }}"
+          echo "Mã Issue GitHub: ${{ inputs.issue_number }}"
+          echo "Chế độ Dry-Run: ${{ inputs.dry_run }}"
+          echo "=================================================="
+
+          DRY_RUN_FLAG=""
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            DRY_RUN_FLAG="--dry-run"
+          fi
+
+          ISSUE_FLAG=""
+          if [ -n "${{ inputs.issue_number }}" ]; then
+            ISSUE_FLAG="--issue ${{ inputs.issue_number }}"
+          fi
+
+          python soar_integration/network_isolation.py \
+            --ip "${{ inputs.target_ip }}" \
+            --target "${{ inputs.device_target }}" \
+            --reason "${{ inputs.reason }}" \
+            $ISSUE_FLAG \
+            $DRY_RUN_FLAG

@@ -1,0 +1,148 @@
+1. XÓA VẬT THỂ THỪA TRONG ẢNH
+Tôi sẽ tải lên một bức ảnh.
+Hãy xóa [vật thể/người/vật dụng cần xóa] khỏi ảnh.
+Sau khi xóa, hãy tái tạo phần nền phía sau một cách tự nhiên, đảm bảo:
+Giữ nguyên bố cục tổng thể.
+Không thay đổi chủ thể chính.
+Không làm biến dạng khuôn mặt hoặc cơ thể.
+Ánh sáng và bóng đổ phải phù hợp với ảnh gốc.
+Không để lại dấu vết chỉnh sửa.
+Mục tiêu là tạo ra kết quả giống như vật thể đó chưa từng xuất hiện trong ảnh.
+Trả lời
+Mẹo Làm Chủ Kỹ Năng AI
+ ·
+ ·
+
+Tác giả
+2. THAY ĐỔI BỐI CẢNH NHƯNG GIỮ NGUYÊN NHÂN VẬT
+Tôi sẽ tải lên ảnh có một nhân vật.
+Hãy giữ nguyên nhân vật trong ảnh, bao gồm:
+Khuôn mặt.
+Kiểu tóc.
+Trang phục.
+Dáng người.
+Biểu cảm.
+Các đặc điểm nhận diện.
+Chỉ thay đổi bối cảnh thành:
+[bối cảnh mới]
+Điều chỉnh ánh sáng, bóng đổ và phối cảnh của nhân vật để phù hợp với môi trường mới.
+Hình ảnh cuối cùng phải chân thực, tự nhiên và không tạo cảm giác nhân vật bị ghép vào nền.
+Trả lời
+Mẹo Làm Chủ Kỹ Năng AI
+ ·
+ ·
+
+Tác giả
+3. ĐỔI TRANG PHỤC CHO NHÂN VẬT
+Tôi sẽ tải lên ảnh nhân vật và ảnh trang phục tham khảo.
+Hãy cho nhân vật trong ảnh thứ nhất mặc trang phục trong ảnh thứ hai.
+Yêu cầu:
+Giữ nguyên khuôn mặt và nhận diện nhân vật.
+Giữ nguyên vóc dáng và tỷ lệ cơ thể.
+Giữ đúng kiểu dáng, màu sắc và form của trang phục tham khảo.
+Trang phục phải ôm theo cơ thể một cách tự nhiên.
+Tạo nếp gấp và bóng đổ phù hợp với chất liệu.
+Giữ nguyên tư thế và góc chụp nếu không có yêu cầu khác.
+Không tự ý thay đổi thiết kế của trang phục.
+Trả lời
+Mẹo Làm Chủ Kỹ Năng AI
+ ·
+ ·
+
+Tác giả
+4. BIẾN ẢNH THƯỜNG THÀNH ẢNH QUẢNG CÁO
+Tôi sẽ tải lên ảnh sản phẩm.
+Hãy biến ảnh này thành một hình ảnh quảng cáo sản phẩm chuyên nghiệp.
+Sản phẩm phải được giữ nguyên:
+Hình dáng.
+Màu sắc.
+Logo.
+Bao bì.
+Nhãn.
+Các chi tiết nhận diện.
+Hãy tạo bối cảnh:
+[studio cao cấp / bàn làm việc / phòng khách / nhà bếp / ngoài trời...]
+Phong cách:
+[luxury / minimal / cinematic / lifestyle]
+Sử dụng ánh sáng quảng cáo chuyên nghiệp, bóng đổ tự nhiên và độ sâu trường ảnh phù hợp.
+Sản phẩm phải là điểm tập trung chính của hình ảnh.
+Trả lời
+Mẹo Làm Chủ Kỹ Năng AI
+ ·
+ ·
+
+Tác giả
+5. TẠO ẢNH CHÂN DUNG CHUYÊN NGHIỆP TỪ ẢNH GỐC
+Hãy sử dụng ảnh tôi tải lên làm ảnh tham chiếu.
+Tạo một phiên bản chân dung chuyên nghiệp nhưng vẫn giữ nhận diện khuôn mặt tự nhiên.
+Phong cách:
+[ảnh profile doanh nhân / chuyên gia / LinkedIn / personal brand / editorial]
+Bối cảnh:
+[studio / văn phòng / không gian hiện đại...]
+Ánh sáng:
+Ánh sáng mềm, tự nhiên, tạo chiều sâu cho khuôn mặt.
+Trang phục:
+[mô tả trang phục]
+Không làm khuôn mặt quá mịn hoặc thay đổi các đặc điểm nhận diện.
+Mục tiêu là tạo cảm giác giống một buổi chụp ảnh chuyên nghiệp ngoài đời thực.
+Trả lời
+Mẹo Làm Chủ Kỹ Năng AI
+ ·
+ ·
+
+Tác giả
+6. TẠO NHIỀU PHIÊN BẢN TỪ MỘT ẢNH
+Dựa trên ảnh gốc tôi tải lên, hãy tạo 6 phiên bản hình ảnh khác nhau.
+Giữ nguyên chủ thể chính và đặc điểm nhận diện.
+Thay đổi lần lượt:
+Bối cảnh.
+Ánh sáng.
+Góc máy.
+Màu sắc.
+Phong cách.
+Bố cục.
+Các phiên bản cần khác nhau rõ ràng nhưng vẫn phải giữ chủ thể nhất quán.
+Không thêm những chi tiết không liên quan và không làm thay đổi đặc điểm chính của chủ thể.
+Trả lời
+Mẹo Làm Chủ Kỹ Năng AI
+ ·
+ ·
+
+Tác giả
+7. TẠO ẢNH SOCIAL MEDIA ĐÚNG TỶ LỆ
+Hãy tối ưu ảnh này để sử dụng trên mạng xã hội.
+Tạo các phiên bản:
+Facebook/Instagram Feed: 4:5.
+Story/Reels: 9:16.
+Square Post: 1:1.
+Giữ nguyên chủ thể và không làm biến dạng hình ảnh.
+Với mỗi phiên bản:
+Đặt chủ thể ở vị trí dễ nhìn.
+Chừa khoảng trống để thêm headline.
+Không cắt mất sản phẩm hoặc khuôn mặt.
+Giữ bố cục cân bằng.
+Đảm bảo hình ảnh vẫn đẹp khi xem trên điện thoại.
+Hãy ưu tiên bố cục phù hợp với mục đích quảng cáo/social media.
+Trả lời
+Mẹo Làm Chủ Kỹ Năng AI
+ ·
+ ·
+
+Tác giả
+8. ĐÓNG VAI ART DIRECTOR ĐỂ HOÀN THIỆN ẢNH
+Hãy đóng vai Art Director và chuyên gia chỉnh sửa hình ảnh.
+Tôi sẽ tải lên một ảnh cần hoàn thiện.
+Hãy kiểm tra lần lượt:
+1. Chủ thể:
+Có bị biến dạng, thiếu chi tiết hoặc mất tính nhất quán không?
+2. Ánh sáng:
+Hướng sáng, bóng đổ và độ tương phản có hợp lý không?
+3. Màu sắc:
+Có màu nào quá gắt hoặc không phù hợp không?
+4. Bố cục:
+Chủ thể có đủ nổi bật không? Có chi tiết gây phân tâm không?
+5. Tính chân thực:
+Ảnh có dấu hiệu bất thường do AI tạo ra không?
+Sau khi phân tích, hãy đề xuất những thay đổi cần thiết và tạo phiên bản hoàn thiện.
+Ưu tiên kết quả tự nhiên, chân thực, sạch và chuyên nghiệp, không lạm dụng hiệu ứng.
+Trả lời

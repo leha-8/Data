@@ -1,0 +1,101 @@
+1️⃣ Chuyển tài liệu thành bài thuyết trình hoàn chỉnh
+Prompt:
+Bạn là chuyên gia xây dựng và thiết kế bài thuyết trình với hơn 15 năm kinh nghiệm.
+Tôi sẽ cung cấp một tài liệu dưới dạng PDF, Word, Google Docs, báo cáo hoặc ghi chú. Hãy đọc kỹ toàn bộ tài liệu và chuyển nội dung thành một bài thuyết trình chuyên nghiệp.
+Yêu cầu:
+- Xác định chủ đề và thông điệp cốt lõi.
+- Sắp xếp nội dung thành 10–15 slide có trình tự hợp lý.
+- Chỉ giữ lại các thông tin cần thiết nhất trên mỗi slide.
+- Đặt tiêu đề ngắn gọn, rõ ràng và hấp dẫn.
+- Đề xuất hình ảnh minh họa phù hợp cho từng phần.
+- Gợi ý biểu đồ, sơ đồ hoặc infographic để trực quan hóa thông tin.
+- Tạo slide tổng kết và lời kêu gọi hành động ở cuối.
+Bộ slide cần giúp người xem nắm được những nội dung quan trọng của tài liệu ngay cả khi không đọc bản gốc.
+Trả lời
+Phan Đông Giang
+ ·
+ ·
+
+Tác giả
+2️⃣ Xây dựng slide theo một phong cách cụ thể
+Prompt:
+Hãy xây dựng bài thuyết trình theo phong cách [McKinsey / Apple / TED Talk / Startup Pitch / Doanh nghiệp / Giáo dục].
+Đối với mỗi slide, hãy trình bày:
+- Tiêu đề đề xuất.
+- Nội dung chính được viết ngắn gọn.
+- Cách sắp xếp các thành phần trên slide.
+- Bảng màu phù hợp.
+- Font chữ nên sử dụng.
+- Kiểu hình ảnh hoặc đồ họa minh họa.
+- Hiệu ứng chuyển cảnh phù hợp.
+Toàn bộ bài thuyết trình cần có diện mạo hiện đại, tinh gọn, nhất quán và thuận tiện cho người thuyết trình.
+Trả lời
+Phan Đông Giang
+ ·
+ ·
+
+Tác giả
+3️⃣ Phát triển một ý tưởng thành bài thuyết trình
+Prompt:
+Tôi đang có ý tưởng ban đầu về chủ đề [điền chủ đề].
+Hãy giúp tôi phát triển ý tưởng này thành một bài thuyết trình hoàn chỉnh từ đầu.
+Nội dung cần bao gồm:
+- Mục tiêu của bài thuyết trình.
+- Thông điệp chính muốn truyền tải.
+- Dàn ý chi tiết.
+- Trình tự các slide.
+- Nội dung cụ thể cho từng slide.
+- Ví dụ hoặc tình huống minh họa.
+- Những dữ liệu và số liệu nên tìm thêm.
+- Phần tổng kết và thông điệp kết thúc.
+Hãy đề xuất số lượng slide phù hợp với thời lượng trình bày khoảng [10/20/30] phút, đồng thời phân bổ thời gian hợp lý cho từng phần.
+Trả lời
+Phan Đông Giang
+ ·
+ ·
+
+Tác giả
+4️⃣ Nâng cấp một bộ slide hiện có
+Prompt:
+Dưới đây là nội dung bài thuyết trình hiện tại của tôi.
+Hãy đóng vai chuyên gia tư vấn thuyết trình và đánh giá toàn diện bộ slide này.
+Vui lòng xác định:
+- Những slide chứa quá nhiều chữ.
+- Những phần trình bày chưa rõ ràng hoặc khó tiếp nhận.
+- Các ý đang bị trùng lặp.
+- Những điểm có thể khiến khán giả mất tập trung.
+- Các câu hoặc đoạn có thể rút gọn.
+- Những nội dung nên được thể hiện trực quan hơn.
+- Vị trí phù hợp để bổ sung biểu đồ, hình ảnh, sơ đồ hoặc infographic.
+Sau khi đánh giá, hãy viết lại từng slide sao cho súc tích, dễ hiểu, chuyên nghiệp và có sức thuyết phục cao hơn.
+Trả lời
+Phan Đông Giang
+ ·
+ ·
+
+Tác giả
+5️⃣ Soạn lời thoại cho từng slide
+Prompt:
+Dựa trên bộ slide đã hoàn thiện, hãy viết kịch bản thuyết trình tương ứng cho từng slide.
+Yêu cầu:
+- Thời lượng nói cho mỗi slide khoảng 60–90 giây.
+- Ngôn ngữ tự nhiên, gần gũi và phù hợp với giao tiếp trực tiếp.
+- Có phần mở đầu giúp thu hút sự chú ý của khán giả.
+- Có câu dẫn và chuyển ý mượt mà giữa các slide.
+- Bổ sung ví dụ thực tế khi thích hợp.
+- Đánh dấu những thông điệp cần nhấn mạnh.
+- Xây dựng phần kết thúc đáng nhớ và có sức thôi thúc.
+Kịch bản cần giúp tôi dễ dàng luyện tập, trình bày tự nhiên và không phải đọc nguyên văn nội dung trên slide.
+
+
+6️⃣ Phát triển slide thành một bộ tài liệu đầy đủ
+Prompt:
+Từ bài thuyết trình này, hãy xây dựng thêm các tài liệu hỗ trợ sau:
+- Một bản tóm tắt dành cho lãnh đạo, dài khoảng một trang.
+- Phần ghi chú chi tiết dành cho người thuyết trình.
+- Danh sách những câu hỏi khán giả có thể đưa ra.
+- Câu trả lời gợi ý cho từng câu hỏi.
+- Checklist các công việc cần chuẩn bị trước buổi thuyết trình.
+- Phiên bản cô đọng gồm 5 slide để trình bày nhanh.
+- Phiên bản chuyên sâu dành cho hội thảo hoặc chương trình đào tạo nội bộ.
+Hãy bảo đảm tất cả tài liệu sử dụng cùng thông điệp, dữ liệu, thuật ngữ và phong cách với bộ slide gốc, đồng thời có thể đưa vào sử dụng ngay.

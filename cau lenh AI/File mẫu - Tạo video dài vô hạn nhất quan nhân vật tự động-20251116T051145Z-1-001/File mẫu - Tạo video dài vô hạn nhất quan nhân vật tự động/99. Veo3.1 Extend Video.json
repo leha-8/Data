@@ -1,0 +1,278 @@
+{
+  "name": "99. Veo3.1 Extend Video",
+  "nodes": [
+    {
+      "parameters": {
+        "amount": 30
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -96,
+        -80
+      ],
+      "id": "a4a1751e-1d3b-4859-bdf6-c943aba65425",
+      "name": "Wait1",
+      "webhookId": "888fc9be-5481-483d-9683-ae3082d45dc1"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.kie.ai/api/v1/veo/extend",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "taskId",
+              "value": "={{ $json.taskid }}"
+            },
+            {
+              "name": "prompt",
+              "value": "={{ $json.prompt }}"
+            },
+            {
+              "name": "seeds",
+              "value": "12345"
+            },
+            {
+              "name": "callBackUrl",
+              "value": "https://your-callback-url.com/veo-extend-callback"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -256,
+        -80
+      ],
+      "id": "92ae9ef6-0ffe-4e10-8dea-cb86c702567c",
+      "name": "Veo3 Extend",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "e741WBt2UdqJ85PC",
+          "name": "KIE AI"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "https://api.kie.ai/api/v1/veo/record-info",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "taskId",
+              "value": "={{ $json.data.taskId }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        48,
+        -80
+      ],
+      "id": "5ff22e93-7d61-47ef-bc62-ce36b3c7ba2d",
+      "name": "Get Video Status",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "e741WBt2UdqJ85PC",
+          "name": "KIE AI"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.data.response.resultUrls[0] }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        384,
+        -80
+      ],
+      "id": "10ffadca-4688-4e9d-9bb4-b73608933b25",
+      "name": "Get Video1",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "e741WBt2UdqJ85PC",
+          "name": "KIE AI"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "3f634c27-67a8-4bb5-a530-8f489ce1efe2",
+              "leftValue": "={{ $json.data.successFlag }}",
+              "rightValue": 1,
+              "operator": {
+                "type": "number",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        192,
+        -80
+      ],
+      "id": "dcebff17-f805-4e9e-a538-407eb240744d",
+      "name": "If2"
+    },
+    {
+      "parameters": {
+        "workflowInputs": {
+          "values": [
+            {
+              "name": "taskid"
+            },
+            {
+              "name": "prompt"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -416,
+        -80
+      ],
+      "id": "9c33a6de-8a69-4612-a6b2-04beef7b5ea1",
+      "name": "When Executed by Another Workflow"
+    },
+    {
+      "parameters": {
+        "content": "## VEO 3.1 Extend Video \n- Connect via [Kie AI](https://www.kie.ai/)\n\n\n**CREATE AUTH** \n-Go into \"Veo3 Extend\"\n- Create Authentication  with Generic Credential Type\n- Choose Header Auth \n\n\n**INSERT API KEY**\n- Name: Authorization \n- Value: Bearer {insert API KEy}\n\n- Connect the credentials to all KIE AI HTTP REQUEST Node",
+        "height": 400,
+        "width": 256,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -704,
+        -96
+      ],
+      "id": "06e394e1-b3ec-48d6-93b5-a44f6526dc95",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "## Author: [Calvin Hia (Dainami AI)](https://www.youtube.com/@dainami_ai)\n\n**👉🏻  [Upgrade & Get Custom Support](https://www.skool.com/content-orchestrator-hub/about?ref=3d6ca766241140c9bccdbc394fa195cc)**",
+        "width": 256,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -704,
+        320
+      ],
+      "id": "077604c5-a7ca-4c3c-addb-5625a704df2d",
+      "name": "Sticky Note3"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Wait1": {
+      "main": [
+        [
+          {
+            "node": "Get Video Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Veo3 Extend": {
+      "main": [
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Video Status": {
+      "main": [
+        [
+          {
+            "node": "If2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If2": {
+      "main": [
+        [
+          {
+            "node": "Get Video1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "node": "Veo3 Extend",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "fb5641bf-e8b1-4601-8b99-c8d2770630fa",
+  "meta": {
+    "instanceId": "d8c459f4ebcadd20c3258ade09582fe0f02de933363f6184259e0c9a36784090"
+  },
+  "id": "NM8zZezrjgfAkb8O",
+  "tags": []
+}

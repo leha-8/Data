@@ -1,0 +1,55 @@
+Câu lệnh 1: Gắn với Chương trình GDPT 2018 & Phát triển năng lực
+Prompt:
+“Hãy viết một sáng kiến kinh nghiệm với đề tài: [Tên đề tài], gắn với mục tiêu của Chương trình GDPT 2018.”
+Yêu cầu:
+Độ dài: 12–15 trang A4, văn phong khoa học, chặt chẽ, dễ đọc.
+Trình bày cơ sở lý luận: văn bản chỉ đạo, CTGDPT 2018, lý thuyết dạy học hiện đại.
+Phần thực trạng rõ ràng, có số liệu khảo sát, bảng biểu minh chứng.
+Giải pháp hướng đến phát triển phẩm chất & năng lực học sinh: tự chủ – tự học, giao tiếp – hợp tác, giải quyết vấn đề, sáng tạo.
+Có tiết dạy minh họa cụ thể.
+So sánh chất lượng trước – sau khi áp dụng bằng bảng biểu/biểu đồ.
+Kết luận & kiến nghị có đề xuất nhân rộng.
+
+Câu lệnh 2 – Đổi mới phương pháp & Ứng dụng công nghệ
+Prompt:
+“Hãy viết một sáng kiến kinh nghiệm với đề tài: [Tên đề tài], tập trung vào đổi mới phương pháp dạy học và ứng dụng công nghệ số/AI.”
+Yêu cầu:
+Cấu trúc: Mở đầu – Nội dung (Cơ sở lý luận, Thực trạng, Giải pháp, Hiệu quả) – Kết luận & Kiến nghị.
+Giải pháp thể hiện:
+Ứng dụng CNTT, công cụ AI, e-learning, phần mềm kiểm tra trực tuyến.
+Phương pháp dạy học tích cực: lớp học đảo ngược, dạy học dự án, trò chơi học tập.
+Có kịch bản bài dạy, phiếu học tập, sản phẩm học sinh minh họa.
+Có số liệu đánh giá hiệu quả bằng bảng biểu.
+Độ dài: 10–12 trang A4.
+
+Câu lệnh 3 – Nhấn mạnh minh chứng & khảo sát thực tiễn
+Prompt:
+“Hãy viết một sáng kiến kinh nghiệm với đề tài: [Tên đề tài], trong đó phần thực trạng và hiệu quả phải có số liệu khảo sát cụ thể.”
+Yêu cầu:
+Văn phong khoa học, súc tích, mạch lạc.
+Có ít nhất 3 bảng số liệu hoặc biểu đồ minh họa.
+Phần giải pháp trình bày quy trình từng bước, có hoạt động dạy học minh họa.
+Có phụ lục: giáo án, phiếu học tập, hình ảnh minh chứng.
+Độ dài: ít nhất 12 trang A4.
+
+Câu lệnh 4 – Tính sáng tạo & Khả năng nhân rộng
+Prompt:
+“Hãy viết một sáng kiến kinh nghiệm với đề tài: [Tên đề tài], nhấn mạnh tính sáng tạo, hiệu quả và khả năng áp dụng rộng rãi.”
+Yêu cầu:
+Cấu trúc: Đặt vấn đề – Giải quyết vấn đề – Kết luận & Kiến nghị.
+Phần giải pháp có ít nhất 3 biện pháp mới, độc đáo, khác biệt so với cách làm truyền thống.
+Có minh chứng: hoạt động dạy học, bảng thống kê, sản phẩm học sinh.
+Hiệu quả minh chứng bằng số liệu & phản hồi thực tế.
+Đề xuất lộ trình nhân rộng trong toàn trường/toàn ngành.
+Độ dài: tối thiểu 15 trang A4.
+
+Câu lệnh 5 – (Phiên bản nhấn mạnh sáng tạo & nhân rộng nâng cao)
+Prompt:
+“Tương tự Siêu câu lệnh 4, nhưng yêu cầu nhấn mạnh sâu hơn vào hiệu quả thực tế và tính lan tỏa của sáng kiến.”
+Yêu cầu:
+Giữ nguyên cấu trúc: Đặt vấn đề – Giải quyết vấn đề – Kết luận & Kiến nghị.
+Làm rõ 3 giải pháp mới, khác biệt, có thể nhân rộng.
+Bổ sung bảng thống kê hiệu quả, sản phẩm học sinh, phản hồi của đồng nghiệp/phụ huynh.
+Có phần đề xuất triển khai rộng rãi, kèm kế hoạch cụ thể.
+Độ dài: tối thiểu 15 trang A4.
+

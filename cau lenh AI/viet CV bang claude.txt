@@ -1,0 +1,13 @@
+1/ Chiến lược ứng tuyển có mục tiêu
+PROMPT:
+“Tôi muốn ứng tuyển vị trí [chức danh] trong [ngành/lĩnh vực] tại [thành phố/remote]. Hãy tạo kế hoạch hành động trong 7 ngày, tập trung vào [loại/quy mô công ty], bao gồm: các trang web tìm việc cụ thể, từ khoá tìm kiếm, và danh sách việc cần làm mỗi ngày mà tôi có thể thực hiện ngay.”
+Trả lời
+Mẹo Làm Chủ Kỹ Năng AI
+ ·
+ ·
+
+Tác giả
+2/ Viết lại CV “lọt mắt” recruiter
+PROMPT:
+“Hãy đóng vai một recruiter senior mỗi ngày xem 200 CV. Viết lại CV của tôi cho vị trí [chức danh mục tiêu] tại [loại công ty]. Biến mọi nhiệm vụ thành thành tích có số liệu đo lường, loại bỏ nội dung chung chung, và khiến giá trị của tôi trở nên không thể bị bỏ qua.
+CV: [dán vào đây].”

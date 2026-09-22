@@ -1,0 +1,74 @@
+Rainmaker VN
+1. Viết theo cách riêng, không rập khuôn
+Prompt:
+"Viết lại đoạn văn dưới đây một cách sáng tạo, tránh lối mòn và từ ngữ sáo rỗng. Hãy sử dụng phong cách gần gũi, dễ hiểu nhưng vẫn giữ được sự độc đáo và chiều sâu.
+[Dán nội dung của bạn]"
+20 giờ
+Trả lời
+
+
+Rainmaker VN
+2. Tư duy ngược – soi lỗi quan điểm
+Prompt:
+"Giả sử bạn là người phản đối hoàn toàn quan điểm này. Hãy phân tích những điểm yếu, giả định chưa được kiểm chứng hoặc những mâu thuẫn trong lập luận sau.
+[Dán nội dung cần phản biện]"
+20 giờ
+Trả lời
+
+
+Rainmaker VN
+3. Tự đánh giá và chỉnh sửa nội dung
+Prompt:
+"Đánh giá đoạn văn dưới đây dựa trên mục tiêu ban đầu là [nêu mục tiêu]. Chỉ ra 3 điểm chưa đạt được và tự chỉnh sửa để nội dung phù hợp hơn với mục tiêu đó.
+[Dán nội dung cần đánh giá]"
+20 giờ
+Trả lời
+
+
+Rainmaker VN
+4. Đánh trúng cảm xúc khách hàng mục tiêu
+Prompt:
+"Đóng vai người thấu hiểu tâm lý khách hàng là phụ nữ từ 30–45 tuổi, đang kinh doanh online và muốn phát triển bản thân. Hãy chỉ ra điều họ thực sự mong muốn, nỗi sợ họ đang đối mặt và những điều họ ít khi chia sẻ. Sau đó, viết một đoạn nội dung chạm đến cảm xúc của họ."
+
+
+
+Rainmaker VN
+5. Viết như người thật có chiều sâu cảm xúc
+Prompt:
+"Viết lại đoạn nội dung sau với giọng văn chân thật và cảm xúc, như thể bạn là người đã trải qua những điều đó và dám mở lòng chia sẻ. Tránh cách viết khô khan, vô cảm, như một máy móc.
+[Dán nội dung]"
+
+Tác giả
+Rainmaker VN
+6. Chuyển nội dung thành câu chuyện hấp dẫn
+Prompt:
+"Chuyển đoạn nội dung sau thành một câu chuyện đầy kịch tính, với phần mở đầu hấp dẫn, nhân vật rõ ràng, có cao trào và kết thúc để lại ấn tượng hoặc câu hỏi mở. Áp dụng kỹ thuật 'Show, don’t tell' và 'twist' bất ngờ.
+[Dán nội dung]"
+
+Tác giả
+Rainmaker VN
+7. Giải thích dễ hiểu như đang dạy người mới
+Prompt:
+"Giải thích nội dung dưới đây như thể bạn đang giảng giải cho người hoàn toàn mới, chưa có kiến thức về chủ đề này. Dùng ví dụ gần gũi từ cuộc sống thường ngày, tránh sử dụng thuật ngữ phức tạp và đảm bảo người mới có thể hiểu rõ ngay lập tức.
+[Dán nội dung hoặc khái niệm]"
+
+Tác giả
+Rainmaker VN
+8. Gây hiệu ứng “Wow!” – Ngắn gọn, trúng tim
+Prompt:
+"Viết lại đoạn nội dung dưới đây sao cho ngắn gọn, mạnh mẽ và chạm vào cảm xúc của người đọc, khiến họ phải thốt lên 'Đúng quá!' hoặc 'Tôi từng nghĩ thế nhưng chưa từng dám nói ra'.
+[Dán nội dung]"
+
+
+Rainmaker VN
+9. Tạo đoạn mở đầu cuốn hút (hook tâm lý)
+Prompt:
+"Viết một đoạn mở đầu thật ấn tượng cho nội dung dưới đây – có thể là câu hỏi kích thích tư duy, một hình ảnh gây tò mò, hoặc một câu nghịch lý. Mục tiêu là khiến người đọc cảm thấy hứng thú ngay trong 5 giây đầu tiên.
+[Dán nội dung]"
+
+Tác giả
+Rainmaker VN
+10. Viết như đang trò chuyện thân mật
+Prompt:
+"Viết lại nội dung dưới đây như một cuộc trò chuyện thoải mái giữa hai người bạn đang ngồi cùng nhau. Hãy dùng ngôn từ gần gũi, dễ hiểu, có nhịp điệu tự nhiên, nhưng vẫn đảm bảo thông tin chính xác và chất lượng.
+[Dán nội dung]"

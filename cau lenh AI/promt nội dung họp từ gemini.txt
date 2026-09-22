@@ -1,0 +1,62 @@
+PROMPT 1 — Chuyển ghi âm họp thành biên bản chuẩn
+“Dựa trên nội dung cuộc họp này, hãy viết lại biên bản họp rõ ràng gồm:
+– Mục tiêu cuộc họp
+– Các ý chính đã thảo luận
+– Quyết định cuối cùng
+– Việc cần làm & người phụ trách.”
+👉 Biên bản gọn – dễ gửi – ai đọc cũng hiểu.
+Trả lời
+Hoàng Anh - AI 5 Phút
+ ·
+ ·
+
+Tác giả
+PROMPT 2 — Tóm tắt họp cho người không tham dự
+“Hãy tóm tắt cuộc họp này trong 5–7 dòng,
+viết cho người KHÔNG tham gia họp nhưng cần nắm việc.”
+👉 Rất hợp gửi cho sếp hoặc team liên quan.
+Trả lời
+Hoàng Anh - AI 5 Phút
+ ·
+ ·
+
+Tác giả
+PROMPT 3 — Bóc tách ACTION ITEM rõ ràng
+“Từ nội dung họp trên, hãy liệt kê toàn bộ việc cần làm theo dạng checklist:
+– Việc
+– Người chịu trách nhiệm
+– Deadline (nếu có).”
+👉 Không còn họp xong rồi… để đó.
+Trả lời
+Hoàng Anh - AI 5 Phút
+ ·
+ ·
+
+Tác giả
+PROMPT 4 — Làm rõ những điểm còn mơ hồ
+“Hãy chỉ ra những điểm trong cuộc họp này còn chưa rõ,
+có thể gây hiểu nhầm hoặc cần làm rõ thêm.”
+👉 Tránh sai việc vì hiểu sai ý họp.
+Trả lời
+Hoàng Anh - AI 5 Phút
+ ·
+ ·
+
+Tác giả
+PROMPT 5 — Viết email recap sau họp
+“Dựa trên nội dung họp, hãy viết email recap gửi cho team với giọng:
+– Rõ ràng
+– Chuyên nghiệp
+– Ngắn gọn
+Bao gồm: kết luận + việc tiếp theo.”
+👉 Copy gửi ngay, không cần nghĩ lại.
+Trả lời
+Hoàng Anh - AI 5 Phút
+ ·
+ ·
+
+Tác giả
+PROMPT 6 — Lưu họp thành tài liệu ghi nhớ dài hạn
+“Hãy chuyển nội dung họp này thành tài liệu ghi nhớ dài hạn,
+dùng để tra cứu sau này khi làm việc cùng dự án.”
+👉 Họp không bị “trôi”, càng về sau càng giá trị.

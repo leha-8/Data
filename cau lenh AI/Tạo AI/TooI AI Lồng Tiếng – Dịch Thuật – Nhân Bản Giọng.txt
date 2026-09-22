@@ -1,0 +1,11 @@
+Lê Hoàng Dũng
+ ·
+📎 LINH TẢI VOICE-PRO – đọc kỹ trước khi cài nha anh em:
+🔹 Cách 1 – Dễ nhất (1-click qua Pinokio, khuyến nghị cho newbie):
+• Tải Pinokio: https://pinokio.co
+• Repo Voice-Pro for Pinokio: https://github.com/ai-anchorite/Voice-Pro
+🔹 Cách 2 – Bản gốc (cho ai biết dùng Git + Conda):
+• https://github.com/abus-aikorea/voice-pro
+• Hướng dẫn cài: https://abus-aikorea.github.io/voice-pro/
+🎥 Xem demo trước khi tải: (bỏ cách)
+https://www.youtube.com/watch?v=z8g8LMhoh_o

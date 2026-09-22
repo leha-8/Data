@@ -1,0 +1,97 @@
+Nguyễn Hữu Hoàng
+ ·
+ ·
+
+Tác giả
+1️⃣ Đọc và hiểu file ngay khi vừa mở - không cần lướt từng ô
+"Đây là file Excel của tôi: [TẢI FILE LÊN].
+Đừng chỉ mô tả lại dữ liệu - hãy cho tôi biết:
+File này đang theo dõi điều gì và mục đích thực sự của nó là gì?
+Cột nào quan trọng nhất để ra quyết định?
+Có gì bất thường trong dữ liệu này mà tôi cần biết ngay không?
+Kết thúc bằng 3 câu hỏi tôi nên đặt ra với dữ liệu này trước khi phân tích sâu hơn."
+✅ Hợp với: nhận bàn giao file từ đồng nghiệp cũ, tiếp quản dữ liệu phòng ban mới, mở file mà chưa biết nó nói gì
+Trả lời
+Nguyễn Hữu Hoàng
+ ·
+ ·
+
+Tác giả
+2️⃣ Tìm ra xu hướng ẩn mà mắt thường không thấy
+"Phân tích file Excel này và tìm ra:
+3 xu hướng rõ nhất đang xảy ra trong dữ liệu
+Con số nào đang tăng hoặc giảm bất thường so với phần còn lại - và tại sao đáng chú ý?
+Nếu xu hướng này tiếp tục trong 30 ngày tới, điều gì sẽ xảy ra?
+Trình bày ngắn gọn như đang báo cáo cho người bận rộn - không liệt kê dài dòng."
+✅ Hợp với: báo cáo doanh thu, báo cáo nhân sự, theo dõi tiến độ dự án - nơi cần phát hiện vấn đề sớm
+Trả lời
+Nguyễn Hữu Hoàng
+ ·
+ ·
+
+Tác giả
+3️⃣ Gợi ý biểu đồ đúng loại - và vẽ luôn cho bạn
+"Từ dữ liệu trong file này, hãy đề xuất:
+Nên dùng loại biểu đồ nào để trình bày từng nhóm số liệu - và tại sao
+Thứ tự trình bày biểu đồ nào trước để người xem hiểu câu chuyện của dữ liệu theo đúng logic
+Màu sắc và cách làm nổi bật điểm quan trọng nhất trong mỗi biểu đồ
+Sau đó tạo luôn biểu đồ phù hợp nhất từ dữ liệu này."
+✅ Mẹo nhỏ: chọn đúng loại biểu đồ quan trọng hơn vẽ đẹp. Biểu đồ cột để so sánh, đường để theo dõi xu hướng, tròn để thể hiện tỷ trọng - đừng nhầm lẫn
+Trả lời
+Nguyễn Hữu Hoàng
+ ·
+ ·
+
+Tác giả
+4️⃣ Viết báo cáo 1 trang trình sếp - từ file dữ liệu hàng trăm dòng
+"Từ file Excel này, viết báo cáo tóm tắt để trình lên lãnh đạo, tối đa 1 trang.
+Cấu trúc bắt buộc:
+Tổng quan tình hình trong 2 câu - không dùng số liệu thô
+3 con số quan trọng nhất cần biết ngay - kèm ý nghĩa thực tế
+2 vấn đề đang xảy ra cần xử lý trong tuần này
+3 đề xuất hành động cụ thể có thể làm ngay
+Giọng văn: thẳng thắn, chuyên nghiệp - người đọc 2 phút là nắm hết."
+✅ Đây là câu lệnh "đắt giá" nhất trong bộ này. Sếp không có thời gian đọc cả file Excel - sếp cần 1 trang súc tích. Câu lệnh này biến hàng trăm dòng số liệu thành 1 trang báo cáo trong 2 phút
+Trả lời
+Nguyễn Hữu Hoàng
+ ·
+ ·
+
+Tác giả
+6️⃣ Dọn dẹp dữ liệu lộn xộn trước khi phân tích
+"File Excel này đang có vấn đề về chất lượng dữ liệu.
+Hãy kiểm tra và chỉ ra:
+Ô nào đang bị trống, sai định dạng hoặc nhập liệu không nhất quán?
+Dòng nào bị trùng lặp cần xóa?
+Cột nào cần chuẩn hóa lại để dữ liệu đồng đều?
+Sau đó hướng dẫn tôi từng bước dọn dẹp file này - kèm công thức Excel cụ thể nếu cần.
+Dữ liệu sạch xong thì phân tích luôn giúp tôi."
+✅ Ghi nhớ: dữ liệu bẩn = phân tích sai = quyết định sai. File từ nhiều người nhập, lỗi đánh máy, thiếu ô, sai định dạng ngày tháng... đều phải dọn trước
+Trả lời
+Nguyễn Hữu Hoàng
+ ·
+ ·
+
+Tác giả
+7️⃣ Dự báo và đưa ra khuyến nghị hành động cụ thể
+"Dựa trên toàn bộ dữ liệu trong file này:
+Dự báo xu hướng trong [30/60/90] ngày tới dựa trên pattern đang thấy trong dữ liệu
+Kịch bản nào có khả năng xảy ra nhất - và kịch bản nào tôi cần chuẩn bị đề phòng?
+3 hành động cụ thể tôi nên làm ngay trong tuần này dựa trên những gì dữ liệu đang cho thấy
+Không đưa ra nhận định chung chung - mỗi khuyến nghị phải gắn trực tiếp với 1 con số cụ thể trong file."
+✅ Câu lệnh này biến Gemini từ "máy báo cáo" thành "cố vấn ra quyết định". Không chỉ nói cho bạn biết chuyện gì đang xảy ra - mà còn nói nên làm gì tiếp theo
+Trả lời
+Nguyễn Hữu Hoàng
+ ·
+ ·
+
+Tác giả
+5️⃣ So sánh tuần - tháng - quý: tìm ra giai đoạn nào tốt nhất, tệ nhất
+"File Excel này có dữ liệu theo [TUẦN/THÁNG/QUÝ].
+So sánh và chỉ ra:
+Giai đoạn nào hiệu suất tốt nhất - yếu tố nào tạo ra sự khác biệt đó?
+Giai đoạn nào tệ nhất - nguyên nhân có thể là gì dựa trên chính dữ liệu này?
+Nếu muốn lặp lại kết quả tốt nhất, tôi cần tập trung vào điều gì?
+Đưa ra con số cụ thể - không nói chung chung kiểu 'tăng đáng kể'."
+✅ Hợp với: báo cáo cuối quý, tổng kết năm, đánh giá hiệu quả chiến dịch, so sánh các phòng ban
+Trả lời

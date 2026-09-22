@@ -1,0 +1,173 @@
+1️⃣ PROMPT: GIỮ NGUYÊN NHẬN DIỆN KHUÔN MẶT KHI ĐỔI BỐI CẢNH
+Sử dụng ảnh tôi cung cấp làm ảnh tham chiếu chính cho nhân vật.
+Hãy tạo một bức ảnh mới với bối cảnh:
+[MÔ TẢ BỐI CẢNH]
+Yêu cầu quan trọng nhất:
+Bảo toàn tối đa nhận diện khuôn mặt của người trong ảnh gốc.
+Giữ nguyên các đặc điểm khuôn mặt đặc trưng như hình dáng khuôn mặt, mắt, mũi, môi, chân mày, tỷ lệ khuôn mặt và các đặc điểm nhận diện tự nhiên.
+Không làm khuôn mặt trẻ hơn hoặc già hơn.
+Không tự ý thay đổi cấu trúc khuôn mặt.
+Không làm da quá mịn hoặc tạo cảm giác khuôn mặt AI.
+Giữ biểu cảm tự nhiên và giống ảnh tham chiếu.
+Chỉ thay đổi bối cảnh, trang phục và môi trường xung quanh.
+Ảnh cuối cùng phải có cảm giác như chính người trong ảnh gốc được chụp trong một địa điểm khác, không phải một nhân vật mới có khuôn mặt tương tự.
+Phong cách: ảnh chụp người thật, photorealistic, ánh sáng tự nhiên, chi tiết da chân thực, tỷ lệ cơ thể tự nhiên.
+Trả lời
+Làm Chủ AI Mỗi Ngày
+ ·
+ ·
+
+Tác giả
+2️⃣ PROMPT: ĐỔI TRANG PHỤC NHƯNG GIỮ KHUÔN MẶT
+Giữ người trong ảnh tham chiếu làm nhân vật chính duy nhất.
+Hãy thay trang phục hiện tại bằng:
+[MÔ TẢ TRANG PHỤC]
+Đồng thời giữ nguyên tối đa:
+Khuôn mặt.
+Tỷ lệ khuôn mặt.
+Đặc điểm mắt.
+Mũi.
+Môi.
+Chân mày.
+Kiểu tóc cơ bản.
+Độ tuổi và thần thái tự nhiên.
+Không thay đổi nhận diện khuôn mặt để phù hợp với trang phục mới.
+Trang phục phải có chất liệu, nếp vải, đường may và độ ôm cơ thể chân thực.
+Hãy đảm bảo trang phục mới phù hợp với vóc dáng và giới tính của nhân vật.
+Không làm ảnh giống ảnh quảng cáo AI quá mức.
+Kết quả cần giống một bức ảnh thời trang được chụp bằng máy ảnh chuyên nghiệp, trong đó nhân vật vẫn nhận ra ngay là người trong ảnh gốc.
+Trả lời
+Làm Chủ AI Mỗi Ngày
+ ·
+ ·
+
+Tác giả
+3️⃣ PROMPT: TẠO ẢNH CHÂN DUNG CHUYÊN NGHIỆP
+Dựa hoàn toàn vào khuôn mặt trong ảnh tham chiếu, hãy tạo một chân dung chuyên ngh… Xem thêm
+Trả lời
+Làm Chủ AI Mỗi Ngày
+ ·
+ ·
+
+Tác giả
+4️⃣ PROMPT: TẠO ẢNH TOÀN THÂN NHƯNG KHÔNG LÀM SAI MẶT
+Hãy tạo một bức ảnh toàn thân sử dụng người trong ảnh tham chiếu.
+Concept:
+[MÔ TẢ CONCEPT]
+Trang phục:
+[TRANG PHỤC]
+Bối cảnh:
+[BỐI CẢNH]
+Vì ảnh toàn thân thường khiến AI dễ thay đổi khuôn mặt, hãy ưu tiên giữ nhận diện khuôn mặt từ ảnh tham chiếu ở mức cao nhất có thể.
+Giữ:
+Khuôn mặt.
+Độ tuổi.
+Kiểu tóc.
+Tỷ lệ cơ thể tự nhiên.
+Đặc điểm nhận diện.
+Không thay đổi khuôn mặt chỉ vì góc máy hoặc khoảng cách chụp.
+Tạo dáng tự nhiên, hai tay và ngón tay đúng giải phẫu.
+Chân và bàn chân cân đối, không méo hình.
+Hình ảnh phải giống một bức ảnh chụp người thật, không phải ảnh nhân vật 3D hoặc AI avatar.
+Trả lời
+Làm Chủ AI Mỗi Ngày
+ ·
+ ·
+
+Tác giả
+5️⃣ PROMPT: ĐỔI GÓC MẶT VÀ TẠO NHIỀU TƯ THẾ
+Sử dụng ảnh tham chiếu và tạo cùng một nhân vật ở 3 tư thế khác nhau:
+Tư thế 1: Nhìn thẳng camera.
+Tư thế 2: Góc mặt 3/4.
+Tư thế 3: Hơi nghiêng sang bên.
+Trong cả 3 hình:
+Giữ tối đa nhận diện khuôn mặt.
+Không thay đổi cấu trúc khuôn mặt.
+Không làm thay đổi tuổi.
+Không tự ý thay đổi kiểu tóc.
+Giữ các đặc điểm nhận diện quan trọng.
+Biểu cảm:
+[TỰ NHIÊN/TỰ TIN/THÂN THIỆN/NGHIÊM TÚC...]
+Ánh sáng và màu sắc phải đồng nhất giữa các ảnh.
+Mục tiêu là tạo cảm giác cùng một người được chụp ở nhiều góc khác nhau trong cùng một buổi chụp, không phải 3 nhân vật khác nhau.
+Trả lời
+Làm Chủ AI Mỗi Ngày
+ ·
+ ·
+
+Tác giả
+6️⃣ PROMPT: TẠO HÀNG LOẠT CONCEPT TỪ MỘT ẢNH GỐC
+Tôi muốn sử dụng một ảnh chân dung duy nhất làm hình ảnh tham chiếu để tạo một bộ ảnh cá nhân.
+Hãy tạo 8 concept:
+Ảnh doanh nhân chuyên nghiệp.
+Ảnh ngồi quán cafe.
+Ảnh du lịch.
+Ảnh thời trang.
+Ảnh lifestyle.
+Ảnh làm việc tại văn phòng.
+Ảnh ngoài trời.
+Ảnh studio cao cấp.
+Với tất cả concept:
+Người trong ảnh phải được giữ nhận diện nhất quán.
+Không tạo 8 khuôn mặt khác nhau.
+Hãy giữ ổn định:
+Đặc điểm khuôn mặt.
+Độ tuổi.
+Kiểu tóc.
+Đặc điểm nhận diện.
+Tỷ lệ cơ thể.
+Chỉ thay đổi:
+Trang phục + bối cảnh + ánh sáng + tư thế + concept.
+Mỗi concept phải có phong cách hình ảnh riêng nhưng vẫn tạo cảm giác thuộc cùng một bộ ảnh cá nhân chuyên nghiệp.
+
+7️⃣ PROMPT: TẠO ẢNH BÁN HÀNG NHƯNG VẪN GIỮ NGƯỜI THẬT
+Hãy sử dụng người trong ảnh tham chiếu làm nhân vật chính cho một bức ảnh quảng cáo sản phẩm.
+Sản phẩm:
+[TÊN SẢN PHẨM]
+Khách hàng mục tiêu:
+[ĐỐI TƯỢNG]
+Concept quảng cáo:
+[MÔ TẢ]
+Người trong ảnh phải vẫn là chính người trong ảnh tham chiếu, với nhận diện khuôn mặt được bảo toàn tối đa.
+Không biến nhân vật thành người mẫu AI khác.
+Không thay đổi:
+Khuôn mặt.
+Độ tuổi.
+Đặc điểm nhận diện.
+Thần thái tự nhiên.
+Có thể thay đổi:
+Trang phục.
+Tư thế.
+Bối cảnh.
+Ánh sáng.
+Sản phẩm phải được thể hiện rõ ràng, đúng hình dáng và đặc điểm thực tế.
+Tạo cảm giác như một buổi chụp quảng cáo chuyên nghiệp, không phải ảnh AI dựng sơ sài.
+Không thêm logo, chữ hoặc chi tiết thương hiệu nếu tôi chưa cung cấp.
+Trả lời
+Làm Chủ AI Mỗi Ngày
+ ·
+ ·
+
+Tác giả
+8️⃣ PROMPT: “SOI” LẠI ẢNH VÀ SỬA NHỮNG ĐIỂM AI LÀM SAI
+Hãy kiểm tra bức ảnh vừa tạo bằng cách so sánh với ảnh tham chiếu ban đầu.
+Tập trung kiểm tra:
+Hình dáng khuôn mặt.
+Tỷ lệ mắt.
+Hình dáng mũi.
+Hình dáng môi.
+Chân mày.
+Đường viền hàm.
+Kiểu tóc.
+Độ tuổi.
+Biểu cảm.
+Các đặc điểm nhận diện tự nhiên.
+Nếu phát hiện điểm nào bị thay đổi không mong muốn, hãy chỉnh lại những điểm đó nhưng giữ nguyên:
+Trang phục.
+Bối cảnh.
+Ánh sáng.
+Tư thế.
+Bố cục.
+Không làm khuôn mặt đẹp hơn theo cách khiến người đó trở thành một người khác.
+Ưu tiên độ giống và tính chân thực hơn việc làm khuôn mặt hoàn hảo.
+Kết quả cuối cùng cần tạo cảm giác như ảnh thật của cùng một người được chụp trong concept mới.

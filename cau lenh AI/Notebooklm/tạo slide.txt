@@ -1,0 +1,72 @@
+Mẹo Làm Chủ Kỹ Năng AI
+ ·
+ ·
+
+Tác giả
+1. BIẾN TÀI LIỆU THÀNH OUTLINE SLIDE HOÀN CHỈNH
+Prompt:
+Tôi đã tải lên tài liệu này. Hãy đóng vai một chuyên gia thiết kế slide thuyết trình. Đọc toàn bộ nội dung và chuyển thành một bộ slide chuyên nghiệp gồm phần mở đầu, các ý chính, ví dụ minh họa, kết luận và lời kêu gọi hành động. Hãy đề xuất số lượng slide hợp lý, tiêu đề cho từng slide và nội dung chính cần xuất hiện trên mỗi trang. Ưu tiên ngắn gọn, dễ trình bày và dễ hiểu với người mới.
+Trả lời
+Mẹo Làm Chủ Kỹ Năng AI
+ ·
+ ·
+
+Tác giả
+2. TỰ ĐỘNG TÓM TẮT THÀNH SLIDE CHO SẾP
+Prompt:
+Hãy đọc toàn bộ tài liệu và tóm tắt thành một bộ slide dành cho lãnh đạo bận rộn. Mỗi slide chỉ giữ lại những thông tin quan trọng nhất. Loại bỏ các nội dung lan man. Tập trung vào vấn đề, dữ liệu, insight, cơ hội và đề xuất hành động. Mục tiêu là giúp người xem hiểu toàn bộ nội dung chỉ trong 5 phút.
+Trả lời
+Mẹo Làm Chủ Kỹ Năng AI
+ ·
+ ·
+
+Tác giả
+3. TẠO CÂU CHUYỆN THUYẾT TRÌNH THU HÚT
+Prompt:
+Dựa trên tài liệu đã tải lên, hãy xây dựng một câu chuyện thuyết trình hấp dẫn. Bắt đầu bằng vấn đề hoặc thực trạng, sau đó dẫn dắt đến nguyên nhân, giải pháp, ví dụ thực tế và kết luận. Hãy sắp xếp các slide theo hướng khiến người xem tò mò và muốn theo dõi đến cuối thay vì chỉ liệt kê thông tin.
+Trả lời
+Mẹo Làm Chủ Kỹ Năng AI
+ ·
+ ·
+
+Tác giả
+4. TẠO NỘI DUNG CHO TỪNG SLIDE
+Prompt:
+Hãy xây dựng nội dung chi tiết cho từng slide trong bài thuyết trình. Với mỗi slide hãy viết tiêu đề, nội dung chính, dữ liệu hoặc ví dụ minh họa và ghi chú dành cho người thuyết trình. Nội dung phải ngắn gọn, dễ đọc trên màn hình và không biến slide thành một trang đầy chữ.
+Trả lời
+Mẹo Làm Chủ Kỹ Năng AI
+ ·
+ ·
+
+Tác giả
+5. ĐỀ XUẤT HÌNH ẢNH VÀ VISUAL CHO TỪNG TRANG
+Prompt:
+Dựa trên nội dung từng slide, hãy đề xuất hình ảnh, biểu đồ, icon, sơ đồ hoặc infographic phù hợp nhất. Với mỗi slide hãy giải thích vì sao nên dùng loại visual đó và mô tả chi tiết để tôi có thể tạo bằng ChatGPT, Gemini hoặc Canva.
+Trả lời
+Mẹo Làm Chủ Kỹ Năng AI
+ ·
+ ·
+
+Tác giả
+6. CHUYỂN TÀI LIỆU THÀNH INFOGRAPHIC SLIDE
+Prompt:
+Hãy đọc tài liệu và chuyển toàn bộ nội dung thành dạng infographic. Ưu tiên timeline, checklist, framework, quy trình, sơ đồ tư duy hoặc biểu đồ so sánh. Mục tiêu là giúp người xem hiểu nhanh chỉ bằng cách nhìn hình ảnh thay vì đọc nhiều chữ.
+Trả lời
+Mẹo Làm Chủ Kỹ Năng AI
+ ·
+ ·
+
+Tác giả
+7. TẠO BỘ SLIDE ĐÚNG PHONG CÁCH THƯƠNG HIỆU
+Prompt:
+Tôi muốn bộ slide mang phong cách [cao cấp, công nghệ, giáo dục, startup, doanh nghiệp]. Hãy đề xuất màu sắc chủ đạo, font chữ, bố cục, phong cách hình ảnh và cách trình bày nội dung phù hợp. Sau đó áp dụng phong cách này cho toàn bộ hệ thống slide để đảm bảo tính nhất quán.
+Trả lời
+Mẹo Làm Chủ Kỹ Năng AI
+ ·
+ ·
+
+Tác giả
+8. KIỂM TRA VÀ NÂNG CẤP TOÀN BỘ SLIDE
+Prompt:
+Hãy đóng vai một chuyên gia thuyết trình cấp cao. Kiểm tra toàn bộ bộ slide vừa tạo và cho tôi biết những điểm còn yếu. Chỉ ra các slide quá dài, các ý khó hiểu, các phần thiếu logic hoặc thiếu sức thuyết phục. Sau đó đề xuất phiên bản tối ưu hơn để bộ slide trở nên chuyên nghiệp, dễ hiểu và hấp dẫn hơn.
+Trả lời

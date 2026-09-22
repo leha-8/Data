@@ -1,0 +1,109 @@
+Nguyễn Hữu Hoàng
+ ·
+ ·
+
+Tác giả
+1️⃣ ĐỌC HIỂU TOÀN BỘ FILE
+Tải file lên TRƯỚC, rồi mới gõ câu lệnh (nhiều người làm ngược, Claude sẽ hỏi lại).
+CÂU LỆNH:
+Hãy phân tích cấu trúc file Excel này: có bao nhiêu sheet, mỗi sheet chứa gì, ý nghĩa từng cột, quan hệ giữa các sheet.
+Sau đó chỉ ra: những chỉ số quan trọng nhất, và những chỗ dữ liệu có vấn đề mà tôi nên biết.
+Nếu có cột nào bạn không chắc ý nghĩa, hãy hỏi tôi thay vì tự suy đoán.
+💡 Câu cuối rất quan trọng. Cột tên là "SL" - AI có thể hiểu là "số lượng" hoặc "sản lượng". Hiểu sai một cột là sai cả bài phân tích.
+Trả lời
+Nguyễn Hữu Hoàng
+ ·
+ ·
+
+Tác giả
+2️⃣ LÀM SẠCH DỮ LIỆU
+CÂU LỆNH:
+Hãy đóng vai chuyên gia phân tích dữ liệu. Kiểm tra file này và liệt kê: dòng trùng lặp, ô trống, định dạng không thống nhất, lỗi nhập liệu, giá trị bất thường.
+Với mỗi lỗi: chỉ rõ ở dòng/cột nào, và đề xuất cách xử lý.
+Trình bày dạng bảng để tôi dễ đi sửa từng chỗ.
+💡 Yêu cầu "chỉ rõ dòng nào" - nếu không, bạn nhận về một bài nhận xét chung chung, không biết sửa ở đâu.
+Trả lời
+Nguyễn Hữu Hoàng
+ ·
+ ·
+
+Tác giả
+3️⃣ PHÂN TÍCH DOANH THU - LỢI NHUẬN
+CÂU LỆNH:
+Hãy phân tích file này dưới góc nhìn giám đốc tài chính: tổng doanh thu, lợi nhuận, tốc độ tăng trưởng, tỷ suất lợi nhuận, sản phẩm bán chạy nhất, khách hàng đóng góp nhiều nhất, thời điểm cao điểm.
+Với mỗi con số, ghi rõ bạn lấy từ cột nào và tính bằng cách nào.
+Cuối cùng: 5 nhận định quan trọng nhất và khuyến nghị hành động.
+💡 "Ghi rõ tính bằng cách nào" là để bạn kiểm tra lại được. Bạn là người ký vào báo cáo, không phải AI.
+Trả lời
+Nguyễn Hữu Hoàng
+ ·
+ ·
+
+
+Tác giả
+4️⃣ DASHBOARD
+CÂU LỆNH:
+Dựa trên dữ liệu này, hãy thiết kế cho tôi một dashboard tương tác: chọn 5-7 chỉ số quan trọng nhất, biểu đồ phù hợp cho từng chỉ số, bố cục để lãnh đạo nhìn 30 giây là nắm được tình hình.
+Giải thích lý do chọn từng loại biểu đồ.
+💡 Điểm bản gốc nói nhỏ hơn thực tế: Claude không chỉ "đề xuất" dashboard - nó tạo ra dashboard tương tác thật, biểu đồ bấm được ngay trong cuộc trò chuyện. Nhưng đó là dashboard web, không phải dashboard trong Excel. Muốn dashboard trong Excel thì dùng Claude for Excel hoặc nhờ nó hướng dẫn tạo PivotChart.
+Trả lời
+Nguyễn Hữu Hoàng
+ ·
+ ·
+
+Tác giả
+5️⃣ GIẢI THÍCH CÔNG THỨC ĐANG CÓ
+CÂU LỆNH:
+Đây là công thức Excel của tôi: [dán công thức]
+Hãy giải thích từng phần bằng lời đơn giản như nói với người mới học.
+Sau đó: cho biết công thức này có lỗi hay điểm yếu gì không, và đề xuất bản gọn hơn nếu có.
+👉 Dùng khi: bạn nhận file từ người khác và không hiểu công thức trong đó.
+Trả lời
+Nguyễn Hữu Hoàng
+ ·
+ ·
+
+Tác giả
+6️⃣ VIẾT CÔNG THỨC MỚI
+CÂU LỆNH:
+Tôi cần làm việc này trong Excel: [mô tả]
+Cấu trúc bảng của tôi: cột A là [...], cột B là [...], dữ liệu từ dòng [2] đến dòng [500].
+Hãy viết công thức, giải thích cách hoạt động, hướng dẫn dán vào ô nào, và cho 2 phương án khác nếu có.
+Tôi dùng Excel [365 / 2019] và giao diện [tiếng Việt / tiếng Anh].
+💡 Ba thông tin làm nên khác biệt: cấu trúc bảng, phạm vi dòng, và phiên bản Excel. Thiếu chúng, công thức nhận về thường phải sửa lại. Riêng phiên bản: XLOOKUP không chạy trên Excel 2019 trở xuống - phải dùng VLOOKUP.
+Trả lời
+Nguyễn Hữu Hoàng
+ ·
+ ·
+
+Tác giả
+7️⃣ DỰ BÁO XU HƯỚNG - ĐỌC KỸ PHẦN LƯU Ý
+CÂU LỆNH:
+Dựa trên dữ liệu này, hãy phân tích xu hướng và đưa ra dự báo cho [3] tháng tới.
+Nêu rõ: phương pháp bạn dùng để dự báo, mức độ tin cậy, những yếu tố có thể làm dự báo sai.
+Nếu dữ liệu chưa đủ để dự báo đáng tin, hãy nói thẳng thay vì đưa con số.
+⚠️ Đây là câu lệnh tôi phải nói thật: AI không dự báo được tương lai. Nó chỉ kéo dài đường xu hướng của quá khứ. Có 12 tháng dữ liệu mà đòi dự báo 12 tháng là phỏng đoán, không phải phân tích.
+Dùng nó để THẤY xu hướng - được. Bê con số vào báo cáo trình lãnh đạo như số liệu chắc chắn - đừng. Và tuyệt đối không đưa dự báo AI vào tài liệu có tính pháp lý hay cam kết chỉ tiêu.
+Trả lời
+Nguyễn Hữu Hoàng
+ ·
+ ·
+
+Tác giả
+8️⃣ TÌM RA ĐIỀU MÌNH CHƯA THẤY
+CÂU LỆNH:
+Đừng chỉ mô tả lại số liệu. Hãy chỉ ra: xu hướng bất thường, cơ hội tăng trưởng, rủi ro tiềm ẩn, mối liên hệ đáng chú ý giữa các chỉ số.
+Với mỗi phát hiện: dẫn số liệu cụ thể chứng minh, và mức độ chắc chắn của bạn.
+Sắp xếp theo mức độ quan trọng.
+💡 "Dẫn số liệu chứng minh" là bộ lọc. Phát hiện nào không dẫn được số cụ thể - bỏ qua.
+Trả lời
+Nguyễn Hữu Hoàng
+ ·
+ ·
+
+Tác giả
+9️⃣ BÁO CÁO HOÀN CHỈNH
+CÂU LỆNH:
+Hãy biến dữ liệu này thành báo cáo trình ban lãnh đạo, gồm: tóm tắt điều hành 1 trang, các chỉ số chính, những phát hiện quan trọng, rủi ro, cơ hội, danh sách việc cần làm theo thứ tự ưu tiên.
+Giọng văn báo cáo điều hành: súc tích, mỗi ý một câu, có số liệu kèm.
+Không dùng từ ngữ hoa mỹ, không suy diễn ngoài dữ liệu.

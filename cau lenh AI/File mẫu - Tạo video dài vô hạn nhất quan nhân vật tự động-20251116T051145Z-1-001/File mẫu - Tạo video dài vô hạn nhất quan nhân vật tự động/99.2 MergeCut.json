@@ -1,0 +1,291 @@
+{
+  "name": "99.2 MergeCut",
+  "nodes": [
+    {
+      "parameters": {
+        "url": "=https://api.shotstack.io/serve/v1/assets/render/{{ $json.response.id }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -400,
+        -64
+      ],
+      "id": "e9c7988a-48c4-4faa-bdda-50bb483ae51f",
+      "name": "Get Status",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "rjmWnA7jutRMuyRC",
+          "name": "Shotstack"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.data[0].attributes.url }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -48,
+        -80
+      ],
+      "id": "c3c81024-68e5-40aa-84d6-4b760c45f665",
+      "name": "Get Cut Video"
+    },
+    {
+      "parameters": {
+        "amount": 30
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        -560,
+        -64
+      ],
+      "id": "e869f85f-c631-432e-ad6d-36922e89f940",
+      "name": "Wait",
+      "webhookId": "7cefdf02-8bea-4375-8923-7be87103a2db"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "092a00dc-1c1a-49e4-8c5a-04326e52b41d",
+              "leftValue": "={{ $json.data[0].attributes.status }}",
+              "rightValue": "ready",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -240,
+        -64
+      ],
+      "id": "d8c1dddd-eab9-43fb-80b8-6dea9135f69f",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.shotstack.io/edit/v1/render",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{$json}}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -752,
+        -64
+      ],
+      "id": "155802aa-0452-4217-a930-581d5e7b6bc1",
+      "name": "Render",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "rjmWnA7jutRMuyRC",
+          "name": "Shotstack"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "language": "python",
+        "pythonCode": "# Access the input data from the previous node\n# Assuming the input is a single item with a 'video_urls' key\nvideo_urls = items[0]['json']['video_urls']\n\nclips = []\n\nfor index, url in enumerate(video_urls):\n    clip = {\n        \"asset\": {\n            \"type\": \"video\",\n            \"src\": url,\n            \"trim\": 1  # Adds the 0.3 second trim to each video\n        },\n        # For sequential playback on the same track, the first clip starts at 0,\n        # and subsequent clips are automatically placed after the previous one using \"auto\".\n        \"start\": \"auto\" if index > 0 else 0,\n        \"length\": \"auto\" # 'auto' uses the full trimmed length of the asset\n    }\n    clips.append(clip)\n\n# Return the generated clips array as the output of this node\nreturn [{\"clips\": clips}]\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1120,
+        -64
+      ],
+      "id": "268215f7-0163-4075-adf1-c8a35f4b8174",
+      "name": "Code in Python (Beta)"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Get the first item (your array contains one object with \"clips\")\nconst input = $input.first().json;\n\nreturn [\n  {\n    json: {\n      timeline: {\n        tracks: [\n          {\n            clips: input.clips\n          }\n        ]\n      },\n      output: {\n        format: \"mp4\",\n        resolution: \"sd\"\n      }\n    }\n  }\n];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -928,
+        -64
+      ],
+      "id": "9c5772c2-5306-4930-9b2b-829b670f7f88",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "workflowInputs": {
+          "values": [
+            {
+              "name": "video_urls",
+              "type": "array"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -1296,
+        -64
+      ],
+      "id": "c9628912-833b-4c15-a348-ff21263a7ada",
+      "name": "When Executed by Another Workflow"
+    },
+    {
+      "parameters": {
+        "content": "## MergeCut Video \n- This cuts the last 1 sec of the video and merge them together\n- Connect via [Shotstack Free Trial](https://shotstack.io/?via=dainami-ai)\n\n\n\n**CREATE AUTH** \n-Go into \"Render\"\n- Create Authentication  with Generic Credential Type\n- Choose Header Auth \n\n\n**INSERT API KEY**\n- Name: x-api-key \n- Value: {insert API KEy}\n\n- Connect the credentials to all KIE AI HTTP REQUEST Node\n",
+        "height": 464,
+        "width": 256,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1648,
+        -144
+      ],
+      "id": "94408194-f645-4f0e-8a4b-40d26b2bcd0e",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "## Author: [Calvin Hia (Dainami AI)](https://www.youtube.com/@dainami_ai)\n\n**👉🏻  [Upgrade & Get Custom Support](https://www.skool.com/content-orchestrator-hub/about?ref=3d6ca766241140c9bccdbc394fa195cc)**",
+        "width": 256,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1648,
+        336
+      ],
+      "id": "92fbd3ae-f502-436f-94d0-9d7f0a906431",
+      "name": "Sticky Note3"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Get Status": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Get Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Get Cut Video",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Render": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in Python (Beta)": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Render",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "node": "Code in Python (Beta)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "aa768af7-4289-4a7d-b47c-b13a962f2fb6",
+  "meta": {
+    "instanceId": "d8c459f4ebcadd20c3258ade09582fe0f02de933363f6184259e0c9a36784090"
+  },
+  "id": "kDC6ETKaD4FCZJar",
+  "tags": []
+}

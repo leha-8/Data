@@ -1,0 +1,34 @@
+ Câu lệnh 1: Đọc file như một chuyên gia phân tích dữ liệu
+Khi nhận một file số liệu, thay vì ngồi đọc từng dòng, bạn thử gửi lên Gemini kèm câu lệnh này:
+"Hãy đọc file Excel/CSV này và cho tôi biết: các chỉ số quan trọng nhất, xu hướng tăng giảm, những số liệu bất thường, yếu tố nào ảnh hưởng đến doanh thu, và 3 việc cần làm ngay. Trình bày như một báo cáo tóm tắt cho lãnh đạo."
+👉 Gemini rất mạnh trong việc phát hiện xu hướng, tìm điểm bất thường và tóm tắt nhanh cho báo cáo - tiết kiệm cho bạn cả tiếng đồng hồ phân tích thủ công.
+Trả lời
+Nguyễn Hữu Hoàng
+ ·
+ ·
+
+Tác giả
+📌 Câu lệnh 2: Tự tạo dashboard theo dõi chỉ tiêu
+Bạn muốn có bảng theo dõi KPI trực quan mà không cần kéo thả thủ công? Thử câu lệnh này:
+"Từ dữ liệu này, hãy tạo dashboard gồm: doanh thu theo ngày, tỷ lệ chuyển đổi, chi phí mỗi đơn (CPA), chiến dịch hiệu quả nhất, và cảnh báo khi chỉ tiêu giảm. Ưu tiên dùng biểu đồ đường, cột và thẻ KPI."
+👉 Gemini có thể tự tạo biểu đồ ngay trong Google Sheets - bạn không cần phải mò từng bước nữa.
+
+Câu lệnh 3: Tìm số liệu bất thường chỉ trong 30 giây
+Thay vì lọc đi lọc lại nhiều lớp trong Excel, bạn chỉ cần hỏi Gemini:
+"Quét toàn bộ bảng và tìm cho tôi: ngày nào doanh thu bất thường, lưu lượng truy cập tăng đột biến, tỷ lệ chuyển đổi giảm mạnh, và chi phí vượt ngưỡng. Sắp xếp theo mức độ ảnh hưởng và cho tôi biết nguyên nhân có thể là gì."
+👉 Câu lệnh này thay thế hoàn toàn việc bạn phải tự lọc, tự tìm từng cột từng hàng - cực kỳ tiết kiệm thời gian!
+
+Câu lệnh 4: Dự báo kết quả 30 ngày tới
+Muốn có con số dự báo để báo cáo lãnh đạo hoặc lập kế hoạch? Thử ngay:
+"Dựa trên dữ liệu 6 tháng gần nhất, hãy dự báo 3 kịch bản cho 30 ngày tới: tốt nhất, trung bình, và xấu nhất. Kèm theo biểu đồ dự báo và các giả định cụ thể."
+👉 Gemini phân tích xu hướng và trực quan hóa dự báo rất nhanh - rất phù hợp để đưa vào báo cáo quản trị.
+
+Câu lệnh 5: Tự sửa lỗi công thức trong file
+File báo cáo đỏ lỗi mà không biết tại sao? Không cần Google từng lỗi nữa:
+"Kiểm tra sheet này và giải thích các lỗi như #REF!, #VALUE!, sai vùng dữ liệu, sai kiểu dữ liệu. Sau đó sửa lại bằng công thức đúng và giải thích bằng tiếng Việt dễ hiểu."
+👉 Gemini không chỉ báo lỗi mà còn giải thích tại sao lỗi xảy ra và cách sửa - rất phù hợp cho người không rành công thức Excel.
+
+Câu lệnh 6: Biến số liệu thành bài thuyết trình cho sếp
+Đây là câu lệnh tôi thấy nhiều người cần nhất - biến một file data khô khan thành nội dung trình bày rõ ràng:
+"Từ file này, hãy tạo: 1 bản tóm tắt tổng quan, 3 biểu đồ quan trọng nhất, 5 điều lãnh đạo cần biết, và 3 quyết định nên ưu tiên trong tuần tới."
+👉 Đây là bước chuyển dữ liệu thành câu chuyện - giúp bạn thuyết phục lãnh đạo dễ hơn rất nhiều thay vì chỉ đưa ra bảng số.

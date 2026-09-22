@@ -1,0 +1,33 @@
+1. Tư duy phân rã vấn đề (Decomposition)
+✅Cốt lõi: Biết tách một bài toán lớn thành từng phần nhỏ, dễ xử lý.
+Người giỏi code không bắt đầu bằng việc “viết”, mà bắt đầu bằng việc “chia”. Khi bạn chia được bài toán thành các bước nhỏ, từng hàm, từng module sẽ trở nên dễ hiểu và dễ kiểm soát hơn.
+🧐Cách rèn luyện: Tập “bẻ nhỏ” mọi việc hằng ngày.
+Ví dụ, khi pha cà phê, hãy thử liệt kê quy trình cụ thể từ đun nước → chuẩn bị bột → khuấy → rót. Làm càng chi tiết, não bạn càng quen với cách tư duy chia nhỏ trong lập trình.
+2 giờ
+Trả lời
+
+Tác giả
+CodeGym
+
+
+Tác giả
+
+2. Tư duy tuần tự & có điều kiện (Sequential & Conditional Thinking)
+✅Cốt lõi: Biết sắp xếp các bước logic theo thứ tự hợp lý, và hiểu cách các điều kiện (if/else) chi phối luồng xử lý.
+🧐Cách rèn luyện: Khi đọc code, đừng chỉ nhìn từng dòng, mà hãy “đọc luồng suy nghĩ” cái gì xảy ra trước, cái gì phụ thuộc cái gì.
+Ngoài giờ học, có thể chơi các game logic như Sudoku, Flow Free, hoặc mini game “giải đường đi”.
+ 
+3. Tư duy mô hình hóa (Pattern Recognition & Modeling)
+✅Cốt lõi: Nhận ra quy luật, mẫu lặp trong vấn đề để tái sử dụng và tối ưu giải pháp.
+Người mới học thường giải mỗi bài một kiểu; người tư duy tốt sẽ nhận ra “à, bài này giống dạng kia, chỉ khác input”. Khi bạn nhìn ra pattern, bạn code nhanh hơn, gọn hơn và ít bug hơn.
+🧐Cách rèn luyện: Khi làm bài tập, đừng vội qua bài mới. Hãy dừng lại hỏi: “Cấu trúc của bài này có thể áp dụng lại ở đâu khác?” –> Đó là cách não bạn hình thành thư viện mẫu riêng.
+
+
+
+4. Tư duy phản biện & kiểm chứng (Analytical & Debugging Thinking)
+✅Cốt lõi: Không tin ngay vào kết quả, mà luôn đặt câu hỏi “Tại sao?”.
+Một dòng code chạy sai không phải “xui”, mà là tín hiệu cho thấy bạn cần phân tích gốc rễ. Lập trình viên giỏi không fix lỗi bằng đoán, họ fix bằng lý luận.
+🧐Cách rèn luyện: Khi gặp bug, đừng chỉ copy lỗi lên Google. Hãy đọc log, thử in ra biến, so sánh giả thuyết. Đóng vai giống như điều tra viên tìm manh mối. Debug là lúc rèn não logic mạnh nhất.
+2 giờ
+Trả lời
+
